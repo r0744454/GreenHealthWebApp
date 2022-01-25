@@ -1,3 +1,5 @@
+import { Plant } from "./Plant";
+
 export interface User {
     id: number,
     firstName?: string,
@@ -6,4 +8,6 @@ export interface User {
     email: string,
     password?: string,
     isAdmin?: boolean
+
+    plants?: Plant[];
 }

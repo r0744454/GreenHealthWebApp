@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Plant } from 'src/app/shared/models/Plant';
-import { PlantService } from 'src/app/shared/services/plant.service';
+import { AnalysisService } from 'src/app/shared/services/analysis/analysis.service';
+import { PlantService } from 'src/app/shared/services/plant/plant.service';
 
 interface HTMLInputEvent extends Event {
   target: HTMLInputElement & EventTarget;
@@ -23,7 +24,7 @@ export class UploadComponent implements OnInit {
 
   imgSource: string = "";
 
-  constructor(private plantService: PlantService, private router: Router) { }
+  constructor(private plantService: PlantService, private router: Router, private analysisService: AnalysisService) { }
 
   ngOnInit(): void {
   }
@@ -39,9 +40,11 @@ export class UploadComponent implements OnInit {
     data.append('image', this.plantImage);
 
     this.plantService.postPlant(this.plant).subscribe(r1 => {
-      this.plant = r1
+      this.plant = r1;
       this.plantService.patchImage(this.plant, data).subscribe(r2 => {
-        this.router.navigateByUrl("user/analysis")
+        this.analysisService.imageString = this.imgSource;
+        this.analysisService.plant = this.plant;
+        this.router.navigateByUrl("/user/analysis");
       },
       err => {
         console.log(err);

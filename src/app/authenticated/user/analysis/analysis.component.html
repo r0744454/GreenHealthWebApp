@@ -1,1 +1,7 @@
-<p>analysis works!</p>
+<div class="row">
+    <img src="{{image}}" alt="">
+
+    <p>Prediction:</p>
+    <p *ngIf="!!result">Week {{result.growthStage}}</p>
+    <p *ngIf="!!result">Confidence: {{result.accuracy}}</p>
+</div>

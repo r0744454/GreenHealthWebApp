@@ -1,3 +1,6 @@
+import { Result } from "./Result";
+import { User } from "./User";
+
 export interface Plant {
     id: number;
     userId: number;
@@ -5,4 +8,7 @@ export interface Plant {
     resultId?: number;
     location?: string;
     imagePath?: string;
+
+    user?: User;
+    result?: Result;
 }
