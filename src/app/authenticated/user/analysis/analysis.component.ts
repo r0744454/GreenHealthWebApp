@@ -14,7 +14,7 @@ import { ResultService } from 'src/app/shared/services/result/result.service';
   styleUrls: ['./analysis.component.scss']
 })
 export class AnalysisComponent implements OnInit {
-  image: string = ""
+  image: string = "";
   plant: Plant = {id: 0, userId: 0}
 
   result: Result | null = null;
@@ -30,11 +30,12 @@ export class AnalysisComponent implements OnInit {
     console.log(this.image);
     console.log(this.plant);
 
-    this.plantService.getPlantResult(this.plant.id).subscribe(
+    /*this.plantService.getPlantResult(this.plant.id).subscribe(
       r => {
         this.result = r;
       }
-    );
+    );*/
+    this.result = {id: 1, growthStage: 2, accuracy: 99.7}
   }
 
 }

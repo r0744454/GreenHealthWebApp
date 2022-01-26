@@ -1,12 +1,13 @@
-<nav class="navbar fixed-top navbar-expand bg-vito-green shadow-sm">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-vito-green shadow-sm">
     <div class="container-fluid">
         <a href="https://remotesensing.vito.be/" class="noHover vicon-black-xl vicon-part-of-vito"></a>
-        <div class="d-flex justify-content-end">
+        <div class="d-flex">
+            <p *ngIf="!!displayName" class="m-auto me-3 pe-md-3" id="displayName">Welcome {{displayName}}</p>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav text-end">
                     <li class="nav-item">
                         <a href="/" class="nav-link">home</a>
                     </li>

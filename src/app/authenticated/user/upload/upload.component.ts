@@ -73,6 +73,7 @@ export class UploadComponent implements OnInit {
       this.getBase64(this.plantImage).then(r => {
         if(r != null) {
           this.imgSource = r.toString();
+          console.log(this.imgSource);
         }
       });
 
