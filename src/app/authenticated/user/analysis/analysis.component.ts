@@ -1,5 +1,4 @@
-import { state } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Plant } from 'src/app/shared/models/Plant';
@@ -21,6 +20,8 @@ export class AnalysisComponent implements OnInit {
 
   state$: Observable<object> = new Observable();
 
+  correctedResult: string = "2";
+
   constructor(private resultService: ResultService, private plantService: PlantService, private route: ActivatedRoute, private analysisService: AnalysisService) { }
 
   ngOnInit(): void {
@@ -36,6 +37,10 @@ export class AnalysisComponent implements OnInit {
       }
     );*/
     this.result = {id: 1, growthStage: 2, accuracy: 99.7}
+  }
+
+  onSubmit(): void {
+    console.log(this.correctedResult);
   }
 
 }
