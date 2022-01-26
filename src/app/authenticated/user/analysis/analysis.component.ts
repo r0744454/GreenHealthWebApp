@@ -1,6 +1,6 @@
-import { state } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Target } from '@angular/compiler';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Plant } from 'src/app/shared/models/Plant';
 import { Result } from 'src/app/shared/models/Result';
@@ -14,27 +14,43 @@ import { ResultService } from 'src/app/shared/services/result/result.service';
   styleUrls: ['./analysis.component.scss']
 })
 export class AnalysisComponent implements OnInit {
-  image: string = ""
+  weekNumbers = [0, 1, 2, 3, 4, 5];
+
+  image: string = "";
   plant: Plant = {id: 0, userId: 0}
 
-  result: Result | null = null;
+  result: Result = {id: 0, growthStage: 0};
+  accDisp: number = 0;
 
   state$: Observable<object> = new Observable();
 
-  constructor(private resultService: ResultService, private plantService: PlantService, private route: ActivatedRoute, private analysisService: AnalysisService) { }
+  correcting: boolean = false;
+
+  constructor(private resultService: ResultService, private plantService: PlantService, private router: Router, private analysisService: AnalysisService) { }
 
   ngOnInit(): void {
     this.image = this.analysisService.imageString;
     this.plant = this.analysisService.plant;
 
-    console.log(this.image);
-    console.log(this.plant);
-
     this.plantService.getPlantResult(this.plant.id).subscribe(
       r => {
         this.result = r;
+        this.result.correctedGrowthStage = this.result.growthStage;
+        this.accDisp = Math.round((this.result.accuracy ?? 0) *100)/100;
       }
     );
+  }
+
+  toggleCorrecting(): void {
+    this.correcting = !this.correcting;
+  }
+
+  onGrowthStageChange(t: any): void {
+    this.result.correctedGrowthStage = t.value;
+  }
+
+  onSubmit(): void {
+    this.router.navigateByUrl('/');
   }
 
 }

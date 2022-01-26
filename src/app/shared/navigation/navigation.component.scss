@@ -1,0 +1,16 @@
+.navbar-toggler span {
+    color: black !important;
+    font-size: 1.2rem;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+@media (min-width: 768px) {
+    #displayName {
+        border-right-style: solid;
+        border-right-color: black;
+        border-right-width: 0.1rem;
+    }
+}
