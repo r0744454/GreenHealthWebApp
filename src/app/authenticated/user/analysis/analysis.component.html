@@ -1,32 +1,32 @@
-<div class="row justify-content-center">
+<div class="row justify-content-center w-100">
     <div class="col col-12 col-md-8 d-flex flex-column align-items-center">
         <img src="{{image}}" alt="" width="300" height="300" id="displayImage">
 
-        <div class="col container mt-3">
-            <div class="col col-12 col-md-6">
+        <div class="col row mt-3 justify-content-center">
+            <div class="col col-12 col-md-6 text-end">
                 <div class="row">
-                    <p>Prediction: <span *ngIf="!!result">Week {{result.growthStage}}</span></p>
+                    <p>Prediction: <span *ngIf="result.id != 0">Week {{result.growthStage}}</span></p>
                 </div>
                 <div class="row">
-                    <p *ngIf="!!result">Confidence: {{result.accuracy}}</p>
+                    <p *ngIf="result.id != 0">Confidence: {{accDisp}}</p>
                 </div>
             </div>
-            <div class="col col-12 col-md-6">
+            <div class="col col-12 col-md-6" *ngIf="correcting && result.id != 0">
                 <form (ngSubmit)="onSubmit()" #correctionForm="ngForm">
-                    <div class="form-group">
+                    <div class="form-group container justify-content-center">
                         <label for="resultInput">Corrected prediction:</label>
-                        <select class="form-select" [(ngModel)]="correctedResult" id="correctWeek">
-                            <option value="1">week 1</option>
-                            <option value="2">week 2</option>
-                            <option value="3">week 3</option>
-                            <option value="4">week 4</option>
-                            <option value="5">week 5</option>
-                            <option value="6">week 6</option>
+                        <select class="form-select" id="resultInput" (change)="onGrowthStageChange($event.target)">
+                            <option [ngValue]="week" *ngFor="let week of weekNumbers" [selected]="result.correctedGrowthStage == week">{{"week" + week}}</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-vito-green">Submit</button>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-vito-green mt-3 justify-content-center">Submit</button>
+                    </div>
                 </form>
             </div>
+        </div>
+        <div class="row mt-3" *ngIf="result.id != 0">
+            <button class="btn btn-vito-green" (click)="toggleCorrecting()">{{correcting ? "Cancel" : "Correct Prediction"}}</button>
         </div>
     </div>
 </div>
