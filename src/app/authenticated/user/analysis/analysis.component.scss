@@ -2,3 +2,17 @@
     object-fit: cover;
     border-radius: 1rem;
 }
+
+#dataRow {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    #dataRow {
+        width: unset;
+    }
+
+    .form-group {
+        max-width: 60%;
+    }
+}

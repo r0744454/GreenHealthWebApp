@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
             <ul class="navbar-nav text-end">
                 <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                    <a href="/" class="nav-link">home</a>
+                    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">home</a>
                 </li>
                 <li class="nav-item" *ngIf="isLoggedIn" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <a routerLink="/user/upload" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">upload</a>

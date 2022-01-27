@@ -8,13 +8,14 @@ import { User } from '../shared/models/User';
 import { AuthResponse } from './authResponse';
 
 import { ConnectionStrings } from '../Globals';
+import { AnalysisService } from '../shared/services/analysis/analysis.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private analysisService: AnalysisService) { }
 
   getToken(): string {
     return localStorage.getItem('token') ?? '';
@@ -28,6 +29,8 @@ export class AuthService {
     localStorage.removeItem('token');
     localStorage.removeItem('id');
     localStorage.removeItem('displayName');
+    this.analysisService.imageString = "";
+    this.analysisService.plant = {id: 0, userId: 0};
   }
 
   isLoggedIn(): boolean {
