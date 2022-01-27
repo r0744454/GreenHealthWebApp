@@ -6,7 +6,7 @@
             <div class="col col-12 d-flex justify-content-center">
                 <div class="spinner-border mt-5" role="status" *ngIf="result.id == 0"></div>
             </div>
-            <div class="col col-12 col-md-5" *ngIf="result.id != 0" id="predictionResultDiv">
+            <div class="col col-12 col-md-6" *ngIf="result.id != 0" id="predictionResultDiv">
                 <div class="row">
                     <p>Prediction: Week {{result.growthStage}}</p>
                 </div>
@@ -17,22 +17,22 @@
                     <p>Confidence: {{accDisp}}</p>
                 </div>
             </div>
-            <div class="col col-12 col-md-7">
+            <div class="col col-12 col-md-6">
                 <form (ngSubmit)="onSubmit()" #correctionForm="ngForm" *ngIf="result.id != 0">
-                    <div class="form-group container justify-content-center">
+                    <div class="form-group">
                         <label for="resultInput">Corrected prediction:</label>
                         <select class="form-select" id="resultInput" (change)="onGrowthStageChange($event.target)">
                             <option *ngFor="let week of weekNumbers" [ngValue]="week" [selected]="result.growthStage == week">{{"week" + week}}</option>
                         </select>
                     </div>
-                    <div class="form-group container justify-content-center">
+                    <div class="form-group">
                         <label for="speciesInput">Corrected species:</label>
                         <select class="form-select" id="speciesInput" (change)="onSpeciesChange($event.target)">
                             <option *ngFor="let species of speciesList" [ngValue]="species" [selected]="result.species == species">{{species}}</option>
                         </select>
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-vito-green mt-3 justify-content-center">Correct result</button>
+                    <div class="d-flex" id="correctionButton">
+                        <button type="submit" class="btn btn-vito-green mt-3">Correct result</button>
                     </div>
                 </form>
             </div>
