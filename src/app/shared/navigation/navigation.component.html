@@ -1,22 +1,23 @@
 <nav class="navbar fixed-top navbar-expand-md navbar-light bg-vito-green shadow-sm ps-2">
     <div class="container-fluid">
-        <a href="https://remotesensing.vito.be/" class="noHover vicon-black-xl vicon-part-of-vito"></a>
+        <a href="https://remotesensing.vito.be/" class="noHover vicon-black-lg vicon-part-of-vito" id="vitoLogo"></a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-            <span *ngIf="!!displayName" class="m-auto me-3 pe-md-3" id="displayName">Welcome {{displayName}} <span class="vicon-black-lg vicon-arrow-down"></span></span>
+            <span *ngIf="!!displayName" class="m-auto me-3 pe-md-3" id="navToggleName">Welcome {{displayName}} <span class="vicon-black-lg vicon-arrow-down"></span></span>
+            <span *ngIf="!displayName" class="navbar-toggler-icon" id="navToggleButton"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
             <ul class="navbar-nav text-end">
-                <li class="nav-item">
+                <li class="nav-item" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <a href="/" class="nav-link">home</a>
                 </li>
-                <li class="nav-item" *ngIf="isLoggedIn">
+                <li class="nav-item" *ngIf="isLoggedIn" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <a routerLink="/user/upload" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">upload</a>
                 </li>
-                <li class="nav-item" *ngIf="!isLoggedIn">
+                <li class="nav-item" *ngIf="!isLoggedIn" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">login</a>
                 </li>
-                <li class="nav-item" *ngIf="isLoggedIn">
+                <li class="nav-item" *ngIf="isLoggedIn" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <a href="#" (click)="logout()" class="nav-link">logout</a>
                 </li>
             </ul>
