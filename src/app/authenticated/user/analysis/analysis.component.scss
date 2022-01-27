@@ -7,6 +7,10 @@
     width: 100%;
 }
 
+#predictionResultDiv {
+    text-align: center;
+}
+
 @media (min-width: 768px) {
     #dataRow {
         width: unset;
@@ -14,5 +18,9 @@
 
     .form-group {
         max-width: 60%;
+    }
+
+    #predictionResultDiv {
+        text-align: right;
     }
 }

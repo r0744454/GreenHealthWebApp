@@ -6,7 +6,7 @@
             <div class="col col-12 d-flex justify-content-center">
                 <div class="spinner-border mt-5" role="status" *ngIf="result.id == 0"></div>
             </div>
-            <div class="col col-12 col-md-5 text-end" *ngIf="result.id != 0">
+            <div class="col col-12 col-md-5" *ngIf="result.id != 0" id="predictionResultDiv">
                 <div class="row">
                     <p>Prediction: Week {{result.growthStage}}</p>
                 </div>
