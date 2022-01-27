@@ -7,10 +7,20 @@
     color: black !important;
 }
 
-@media (min-width: 768px) {
-    #displayName {
-        border-right-style: solid;
-        border-right-color: black;
-        border-right-width: 0.1rem;
+#navToggleName {
+    font-size: 1rem;
+
+    .vicon-arrow-down {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 576px) {
+    #navToggleName {
+        font-size: 1.2rem;
+
+        .vicon-arrow-down {
+            font-size: 1.2rem;
+        }
     }
 }
