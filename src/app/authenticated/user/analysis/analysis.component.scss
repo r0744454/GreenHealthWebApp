@@ -2,3 +2,45 @@
     object-fit: cover;
     border-radius: 1rem;
 }
+
+#dataRow {
+    width: 100%;
+}
+
+#predictionResultDiv {
+    text-align: center;
+}
+
+#correctionButton {
+    justify-content: center;
+}
+
+.form-group {
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    #dataRow {
+        width: unset;
+        border-right: 0.5rem, solid, black;
+    }
+
+    .form-group {
+        max-width: 60%;
+        justify-content: right;
+    }
+
+    #predictionResultDiv {
+        text-align: right;
+    }
+
+    #correctionButton {
+        justify-content: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .form-group {
+        max-width: 40%;
+    }
+}

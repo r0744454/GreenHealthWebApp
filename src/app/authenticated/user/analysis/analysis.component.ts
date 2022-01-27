@@ -15,6 +15,7 @@ import { ResultService } from 'src/app/shared/services/result/result.service';
 })
 export class AnalysisComponent implements OnInit {
   weekNumbers = [0, 1, 2, 3, 4, 5];
+  speciesList = ["mais", "fles"];
 
   image: string = "";
   plant: Plant = {id: 0, userId: 0}
@@ -35,7 +36,6 @@ export class AnalysisComponent implements OnInit {
     this.plantService.getPlantResult(this.plant.id).subscribe(
       r => {
         this.result = r;
-        this.result.correctedGrowthStage = this.result.growthStage;
         this.accDisp = Math.round((this.result.accuracy ?? 0) *100)/100;
       }
     );
@@ -49,7 +49,12 @@ export class AnalysisComponent implements OnInit {
     this.result.correctedGrowthStage = t.value;
   }
 
+  onSpeciesChange(t: any): void {
+    this.result.correctedSpecies = t.value;
+  }
+
   onSubmit(): void {
+    this.resultService.putResult(this.result);
     this.router.navigateByUrl('/');
   }
 

@@ -11,5 +11,5 @@ export interface Plant {
 
     user?: User;
     result?: Result;
-    timeStampt?: string;
+    timeStamp?: string;
 }
