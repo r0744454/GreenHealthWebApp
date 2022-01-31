@@ -9,5 +9,5 @@ export class AnalysisService {
   constructor() { }
 
   imageString: string = "";
-  plant: Plant = {id: 0, userId: 0};
+  plant: Plant = {id: 0, plotId: 0};
 }

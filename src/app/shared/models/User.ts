@@ -1,13 +1,16 @@
+import { Organisation } from "./Organisation";
 import { Plant } from "./Plant";
 
 export interface User {
     id: number,
+    organisationId?: number,
     firstName?: string,
     lastName?: string,
     address?: string,
     email: string,
     password?: string,
-    isAdmin?: boolean
+    isAdmin?: boolean,
 
-    plants?: Plant[];
+    organisation?: Organisation,
+    plants?: Plant[]
 }

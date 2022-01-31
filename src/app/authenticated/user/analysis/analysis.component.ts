@@ -15,7 +15,7 @@ import { ResultService } from 'src/app/shared/services/result/result.service';
 })
 export class AnalysisComponent implements OnInit {
   image: string = ""
-  plant: Plant = {id: 0, userId: 0}
+  plant: Plant = {id: 0, plotId: 0}
 
   result: Result | null = null;
 

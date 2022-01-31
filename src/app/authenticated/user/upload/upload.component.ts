@@ -20,7 +20,8 @@ export class UploadComponent implements OnInit {
   isSubmitted: boolean = false;
   submitError: boolean = false;
 
-  plant: Plant = {id: 0, userId: parseInt(localStorage.getItem('id')??'0')}
+  //Has to be changed!!!!!! Maybe back-end can be changed?
+  plant: Plant = {id: 0, plotId: parseInt(localStorage.getItem('id')??'0')}
 
   imgSource: string = "";
 
