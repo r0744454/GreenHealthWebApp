@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { Plant } from 'src/app/shared/models/Plant';
+import { Plot } from 'src/app/shared/models/Plot';
 import { AnalysisService } from 'src/app/shared/services/analysis/analysis.service';
 import { PlantService } from 'src/app/shared/services/plant/plant.service';
+import { PlotService } from 'src/app/shared/services/plot/plot.service';
 
 interface HTMLInputEvent extends Event {
   target: HTMLInputElement & EventTarget;
@@ -20,13 +23,22 @@ export class UploadComponent implements OnInit {
   isSubmitted: boolean = false;
   submitError: boolean = false;
 
-  plant: Plant = {id: 0, userId: parseInt(localStorage.getItem('id')??'0')}
+  defaultPlot: Plot = {id: 0, organisationId: 0, location: ""};
+  plots: Plot[] = new Array<Plot>();
+  $plots: Subscription = new Subscription();
+
+  //Has to be changed!!!!!! Maybe back-end can be changed?
+  plant: Plant = {id: 0, plotId: 0}
 
   imgSource: string = "";
 
-  constructor(private plantService: PlantService, private router: Router, private analysisService: AnalysisService) { }
+  constructor(private plantService: PlantService, private router: Router, private analysisService: AnalysisService, private plotService: PlotService) { }
 
   ngOnInit(): void {
+    this.defaultPlot = this.plotService.getDefaultPlot();
+    this.$plots = this.plotService.getPlots().subscribe(r => {
+      this.plots = r;
+    })
   }
 
   onSubmit(): void {
@@ -38,6 +50,7 @@ export class UploadComponent implements OnInit {
 
     var data = new FormData();
     data.append('image', this.plantImage);
+    this.plant.plotId = this.defaultPlot.id;
 
     this.plantService.postPlant(this.plant).subscribe(r1 => {
       this.plant = r1;
@@ -77,6 +90,10 @@ export class UploadComponent implements OnInit {
 
       this.submitError = false;
     }
+  }
+
+  compareFn(x: Plot, y: Plot): boolean {
+    return x.id == y.id;
   }
 
 }

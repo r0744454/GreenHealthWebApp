@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-md-6 mb-2">
+            <form #plotform="ngForm" (ngSubmit)="onSubmitNew(plotform)">
+                <div class="form-group">
+                    <label for="plotNameInput">Plotname</label>
+                    <input type="text" name="plotName" ngModel required class="form-control" id="plotNameInput">
+                    <div class="alert alert-danger mt-1" *ngIf="formError">Please enter a valid name</div>
+                </div>
+                <div class="form-group mt-2">
+                    <button class="btn btn-vito-green" type="submit">Create new plot</button>
+                </div>
+            </form>
+        </div>
+        <div class="col col-12 col-md-6">
+            <form #defaultPlotForm="ngForm" (ngSubmit)="onSubmitDefault(defaultPlotForm)">
+                <div class="form-group">
+                    <label for="defaultPlotInput">Default plot</label>
+                    <select [(ngModel)]="defaultPlot" [compareWith]="compareFn" class="form-select" name="defaultPlot" id="defaultPlotInput">
+                        <option *ngFor="let plot of plots" [ngValue]="plot">{{plot.location}}</option>
+                    </select>
+                </div>
+                <div class="form-group mt-2">
+                    <button class="btn btn-vito-green" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <app-plot-card *ngFor="let plot of plots" [plot]="plot" class="col col-6 col-md-4 col-lg-3 mt-3"></app-plot-card>
+    </div>
+</div>

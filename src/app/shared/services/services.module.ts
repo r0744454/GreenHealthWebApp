@@ -4,6 +4,8 @@ import { PlantService } from './plant/plant.service';
 import { ResultService } from './result/result.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SecurityInterceptor } from 'src/app/security/authentication/security.interceptor';
+import { AnalysisService } from './analysis/analysis.service';
+import { PlotService } from './plot/plot.service';
 
 @NgModule({
   declarations: [],
@@ -13,6 +15,8 @@ import { SecurityInterceptor } from 'src/app/security/authentication/security.in
   providers: [
     PlantService,
     ResultService,
+    PlotService,
+    AnalysisService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: SecurityInterceptor,

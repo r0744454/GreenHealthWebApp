@@ -1,15 +1,18 @@
+import { Plot } from "./Plot";
 import { Result } from "./Result";
-import { User } from "./User";
+import { Season } from "./Season";
 
 export interface Plant {
-    id: number;
-    userId: number;
+    id: number,
+    plotId: number,
 
-    resultId?: number;
-    location?: string;
-    imagePath?: string;
+    resultId?: number,
+    seasonId?: number,
+    location?: string,
+    imagePath?: string,
+    timestamp?: string,
 
-    user?: User;
-    result?: Result;
-    timeStamp?: string;
+    season?: Season,
+    plot?: Plot,
+    result?: Result
 }
