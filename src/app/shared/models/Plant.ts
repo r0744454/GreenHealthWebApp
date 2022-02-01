@@ -1,7 +1,6 @@
 import { Plot } from "./Plot";
 import { Result } from "./Result";
 import { Season } from "./Season";
-import { User } from "./User";
 
 export interface Plant {
     id: number,

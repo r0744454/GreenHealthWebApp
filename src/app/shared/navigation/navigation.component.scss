@@ -1,0 +1,26 @@
+.navbar-toggler span {
+    color: black !important;
+    font-size: 1.2rem;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+#navToggleName {
+    font-size: 1rem;
+
+    .vicon-arrow-down {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 576px) {
+    #navToggleName {
+        font-size: 1.2rem;
+
+        .vicon-arrow-down {
+            font-size: 1.2rem;
+        }
+    }
+}

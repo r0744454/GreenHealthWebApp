@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
         result => {
           localStorage.setItem('token', result.token);
           localStorage.setItem('id', result.user.id.toString());
-          localStorage.setItem('displayName', (result.user.firstName ?? result.user.email) + result.user.lastName);
+          localStorage.setItem('displayName', (result.user.firstName ?? result.user.email) + " " + result.user.lastName);
           this.router.navigate(['']);
         }, error => {
           this.isSubmitted = false;

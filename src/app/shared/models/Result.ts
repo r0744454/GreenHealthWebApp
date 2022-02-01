@@ -3,4 +3,7 @@ export interface Result {
     growthStage: number;
 
     accuracy?: number;
+    correctedGrowthStage?: number;
+    species?: string;
+    correctedSpecies?: string;
 }

@@ -70,7 +70,6 @@ export class UploadComponent implements OnInit {
     if(target.files != null) {
       this.plantImage = target.files[0];
 
-      console.log("Image size: " + this.plantImage.size);
       this.getBase64(this.plantImage).then(r => {
         if(r != null) {
           this.imgSource = r.toString();
