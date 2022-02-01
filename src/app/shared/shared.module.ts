@@ -8,10 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { Router, RouterModule } from '@angular/router';
 import { ServicesModule } from './services/services.module';
 
+
 @NgModule({
   declarations: [
     NavigationComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     CommonModule,

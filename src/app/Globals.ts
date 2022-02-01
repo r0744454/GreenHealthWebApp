@@ -1,3 +1,3 @@
 export class ConnectionStrings {
-    public static apiUrl: string = "https://greenhealth-api.azurewebsites.net/api/"
+    public static apiUrl: string = "https://greenhealthapi.azurewebsites.net/api/"
 }
