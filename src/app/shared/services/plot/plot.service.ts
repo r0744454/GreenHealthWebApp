@@ -24,7 +24,7 @@ export class PlotService {
   }
 
   postPlot(plot: Plot): Observable<Plot> {
-    return this.httpClient.post<Plot>(ConnectionStrings.apiUrl + "/Plots", plot);
+    return this.httpClient.post<Plot>(ConnectionStrings.apiUrl + "Plots", plot);
   }
 
   deletePlot(id: number): void {

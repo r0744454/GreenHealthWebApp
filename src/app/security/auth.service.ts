@@ -30,7 +30,7 @@ export class AuthService {
     localStorage.removeItem('id');
     localStorage.removeItem('displayName');
     this.analysisService.imageString = "";
-    this.analysisService.plant = {id: 0, userId: 0};
+    this.analysisService.plant = {id: 0, plotId: 0};
   }
 
   isLoggedIn(): boolean {

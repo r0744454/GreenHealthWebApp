@@ -14,6 +14,8 @@ import { ResultService } from 'src/app/shared/services/result/result.service';
   styleUrls: ['./analysis.component.scss']
 })
 export class AnalysisComponent implements OnInit {
+  speciesList: string[] = ["mais", "fles"]
+  weekNumbers: number[] = [1,2,3,4,5,6]
   image: string = ""
   plant: Plant = {id: 0, plotId: 0}
 
