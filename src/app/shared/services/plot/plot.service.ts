@@ -34,4 +34,16 @@ export class PlotService {
   getOrganisationPlots(id: number): Observable<Plot[]> {
     return this.httpClient.get<Plot[]>(ConnectionStrings.apiUrl + "Organisations/" + id + "/plots");
   }
+
+  setDefaultPlot(plot: Plot): void {
+    localStorage.setItem("defaultPlot", JSON.stringify(plot));
+  }
+
+  getDefaultPlot(): Plot {
+    var plotString = localStorage.getItem("defaultPlot");
+    if(plotString == null || plotString == "") {
+      return {id: 0, organisationId: 0, location: ""};
+    }
+    return JSON.parse(plotString);
+  }
 }

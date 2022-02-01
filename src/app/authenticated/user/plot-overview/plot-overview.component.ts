@@ -21,10 +21,7 @@ export class PlotOverviewComponent implements OnInit {
   constructor(private plotService: PlotService) { }
 
   ngOnInit(): void {
-    var ts = localStorage.getItem("defaultPlot");
-    if(ts != null) {
-      this.defaultPlot = JSON.parse(ts);
-    }
+    this.defaultPlot = this.plotService.getDefaultPlot();
     this.$plot = this.plotService.getPlots().subscribe(r => {
       this.plots = r;
     });
@@ -48,7 +45,7 @@ export class PlotOverviewComponent implements OnInit {
 
   onSubmitDefault(f: NgForm) {
     this.defaultPlot = f.value.defaultPlot;
-    localStorage.setItem("defaultPlot", JSON.stringify(f.value.defaultPlot));
+    this.plotService.setDefaultPlot(f.value.defaultPlot);
   }
 
   compareFn(x: Plot, y: Plot): boolean {
