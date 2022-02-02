@@ -6,6 +6,7 @@ import { Plot } from 'src/app/shared/models/Plot';
 import { AnalysisService } from 'src/app/shared/services/analysis/analysis.service';
 import { PlantService } from 'src/app/shared/services/plant/plant.service';
 import { PlotService } from 'src/app/shared/services/plot/plot.service';
+import { TranslationService } from 'src/app/shared/services/translation/translation.service';
 
 interface HTMLInputEvent extends Event {
   target: HTMLInputElement & EventTarget;
@@ -27,12 +28,11 @@ export class UploadComponent implements OnInit {
   plots: Plot[] = new Array<Plot>();
   $plots: Subscription = new Subscription();
 
-  //Has to be changed!!!!!! Maybe back-end can be changed?
   plant: Plant = {id: 0, plotId: 0}
 
   imgSource: string = "";
 
-  constructor(private plantService: PlantService, private router: Router, private analysisService: AnalysisService, private plotService: PlotService) { }
+  constructor(private plantService: PlantService, private router: Router, private analysisService: AnalysisService, private plotService: PlotService, public t: TranslationService) { }
 
   ngOnInit(): void {
     this.defaultPlot = this.plotService.getDefaultPlot();
@@ -44,6 +44,7 @@ export class UploadComponent implements OnInit {
   onSubmit(): void {
     this.isSubmitted = true;
     if(this.plantImage.size == 0) {
+      this.isSubmitted = false;
       this.submitError = true;
       return;
     }

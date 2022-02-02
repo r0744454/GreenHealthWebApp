@@ -8,37 +8,37 @@
             </div>
             <div class="col col-12 col-md-6" *ngIf="result.id != 0" id="predictionResultDiv">
                 <div class="row">
-                    <p>Prediction: Week {{result.growthStage}}</p>
+                    <p>{{t.gt("prediction_growthstage", [result.growthStage.toString()])}}</p>
                 </div>
                 <div class="row">
-                    <p>Species: {{result.species}}</p>
+                    <p>{{t.gt("prediction_species", [t.gt("species_"+result.species)])}}</p>
                 </div>
                 <div class="row">
-                    <p>Confidence: {{accDisp}}</p>
+                    <p>{{t.gt("model_confidence", [accDisp.toString()])}}</p>
                 </div>
             </div>
             <div class="col col-12 col-md-6">
                 <form (ngSubmit)="onSubmit()" #correctionForm="ngForm" *ngIf="result.id != 0">
                     <div class="form-group">
-                        <label for="resultInput">Corrected prediction:</label>
+                        <label for="resultInput">{{t.gt("p_growthstage_correction")}}</label>
                         <select class="form-select" id="resultInput" (change)="onGrowthStageChange($event.target)">
-                            <option *ngFor="let week of weekNumbers" [ngValue]="week" [selected]="result.growthStage == week">{{"week" + week}}</option>
+                            <option *ngFor="let week of weekNumbers" [ngValue]="week" [selected]="result.growthStage == week">{{t.gt("growthstage_naming", [week.toString()])}}</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="speciesInput">Corrected species:</label>
+                        <label for="speciesInput">{{t.gt("p_species_correction")}}</label>
                         <select class="form-select" id="speciesInput" (change)="onSpeciesChange($event.target)">
-                            <option *ngFor="let species of speciesList" [ngValue]="species" [selected]="result.species == species">{{species}}</option>
+                            <option *ngFor="let species of speciesList" [ngValue]="species" [selected]="result.species == species">{{t.gt("species_"+species)}}</option>
                         </select>
                     </div>
                     <div class="d-flex" id="correctionButton">
-                        <button type="submit" class="btn btn-vito-green mt-3">Correct result</button>
+                        <button type="submit" class="btn btn-vito-green mt-3">{{t.gt("correction_save")}}</button>
                     </div>
                 </form>
             </div>
         </div>
         <div class="row mt-3" *ngIf="result.id != 0">
-            <button class="btn btn-vito-green" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Continue</button>
+            <button class="btn btn-vito-green" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{t.gt("analysis_done")}}</button>
         </div>
     </div>
 </div>

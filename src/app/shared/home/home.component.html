@@ -8,7 +8,7 @@
   </div>
   <div class="row">
     <div class="col-md-6 col-12">
-      Voor project4.0 hebben we de opdracht gekregen van Vito om verschillende planten hun groeistadia te herkennen.
+      {{t.gt("home_description")}}
     </div>
     <div class="col-md-6 col-12">
       <img src="../../../assets/img/plantenhome.jfif" height="400" width="auto">
@@ -29,7 +29,7 @@
           <div class="row">
             <div class="col">
               <a routerLink="/user/plots" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
-                <h2 class="text-black d-inline-block">Plots</h2>
+                <h2 class="text-black d-inline-block">{{t.gt("navbar_plots")}}</h2>
               </a>
             </div>
           </div>
@@ -47,7 +47,7 @@
         <div class="row">
           <div class="col">
             <a routerLink="/user/upload" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
-              <h2 class="text-black d-inline-block">Upload</h2>
+              <h2 class="text-black d-inline-block">{{t.gt("navbar_upload")}}</h2>
             </a>
           </div>
         </div>
@@ -85,7 +85,7 @@
         <div class="row">
           <div class="col">
             <a routerLink="/user/upload" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
-              <h2 class="text-black d-inline-block">Dashboard</h2>
+              <h2 class="text-black d-inline-block">{{t.gt("navbar_dashboard")}}</h2>
             </a>
           </div>
         </div>
