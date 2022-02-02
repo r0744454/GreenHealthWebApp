@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Plot } from 'src/app/shared/models/Plot';
 import { PlotService } from 'src/app/shared/services/plot/plot.service';
+import { TranslationService } from 'src/app/shared/services/translation/translation.service';
 
 @Component({
   selector: 'app-plot-overview',
@@ -18,7 +19,7 @@ export class PlotOverviewComponent implements OnInit {
 
   formError: boolean = false;
 
-  constructor(private plotService: PlotService) { }
+  constructor(private plotService: PlotService, public t: TranslationService) { }
 
   ngOnInit(): void {
     this.defaultPlot = this.plotService.getDefaultPlot();
