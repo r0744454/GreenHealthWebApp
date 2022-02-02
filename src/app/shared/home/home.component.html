@@ -1,2 +1,95 @@
-<p *ngIf="!isLoggedIn">You are anonymous!</p>
-<p *ngIf="isLoggedIn">You are user!</p>
+<div *ngIf="!isLoggedIn">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center">
+        Project4.0
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-12">
+      Voor project4.0 hebben we de opdracht gekregen van Vito om verschillende planten hun groeistadia te herkennen.
+    </div>
+    <div class="col-md-6 col-12">
+      <img src="../../../assets/img/plantenhome.jfif" height="400" width="auto">
+    </div>
+  </div>
+</div>
+<div *ngIf="isLoggedIn">
+  <div class="row">
+    <div class="col-md-6 col-12 text-center">
+      <div class="container">
+          <div class="row">
+            <div class="col">
+              <a routerLink="/user/plots" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
+                <img class="navbuttons" src="../../../assets/img/plots.jpeg" alt="" height="200" width="200">
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a routerLink="/user/plots" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
+                <h2 class="text-black d-inline-block">Plots</h2>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-12 text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <a routerLink="/user/upload" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
+              <img class="navbuttons" src="../../../assets/img/picture.jpeg" alt="" height="200" width="200">
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <a routerLink="/user/upload" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
+              <h2 class="text-black d-inline-block">Upload</h2>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-12 text-center">
+      <div class="container">
+          <div class="row">
+            <div class="col">
+              <a routerLink="/user/plots" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
+                <img class="navbuttons" src="../../../assets/img/plots.jpeg" alt="" height="200" width="200">
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a routerLink="/user/plots" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
+                <h2 class="text-black d-inline-block">placeholder</h2>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-12 text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <a routerLink="/user/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
+              <img class="navbuttons" src="../../../assets/img/analyzing.jpeg" alt="" height="200" width="200">
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <a routerLink="/user/upload" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="text-decoration-none">
+              <h2 class="text-black d-inline-block">Dashboard</h2>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
