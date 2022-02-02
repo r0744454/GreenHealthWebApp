@@ -1,7 +1,11 @@
-<app-navigation></app-navigation>
-<div id="content" class="container">
-  <div class="container">
-    <router-outlet></router-outlet>
+<div class="d-flex flex-column min-vh-100">
+  <app-navigation></app-navigation>
+  <div id="content" class="container">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="mt-auto">
+    <app-footer></app-footer>
   </div>
 </div>
-<app-footer></app-footer>

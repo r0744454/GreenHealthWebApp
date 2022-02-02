@@ -1,0 +1,10 @@
+.navbuttons{
+  border-radius: 25px;
+  transition: all 1.5s ease-in-out;
+}
+
+.navbuttons:hover{
+  transform: scale(1.02);
+  box-shadow: 2px 2px 3px grey;
+}
+
