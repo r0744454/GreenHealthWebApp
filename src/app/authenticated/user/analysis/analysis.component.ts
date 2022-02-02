@@ -7,6 +7,7 @@ import { Result } from 'src/app/shared/models/Result';
 import { AnalysisService } from 'src/app/shared/services/analysis/analysis.service';
 import { PlantService } from 'src/app/shared/services/plant/plant.service';
 import { ResultService } from 'src/app/shared/services/result/result.service';
+import { TranslationService } from 'src/app/shared/services/translation/translation.service';
 
 @Component({
   selector: 'app-analysis',
@@ -26,7 +27,7 @@ export class AnalysisComponent implements OnInit {
 
   correcting: boolean = false;
 
-  constructor(private resultService: ResultService, private plantService: PlantService, private router: Router, private analysisService: AnalysisService) { }
+  constructor(private resultService: ResultService, private plantService: PlantService, private router: Router, private analysisService: AnalysisService, public t: TranslationService) { }
 
   ngOnInit(): void {
     this.image = this.analysisService.imageString;

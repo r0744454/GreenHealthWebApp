@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { User } from '../../../shared/models/User';
 import { Router } from '@angular/router';
 import { AuthService } from '../../auth.service';
+import { TranslationService } from 'src/app/shared/services/translation/translation.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   isSubmitted = false;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, public t: TranslationService) { }
 
   ngOnInit(): void {
   }

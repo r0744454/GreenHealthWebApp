@@ -23,7 +23,7 @@
                 <li class="nav-item" *ngIf="isLoggedIn" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <a href="#" (click)="logout()" class="nav-link">{{t.gt("navbar_logout")}}</a>
                 </li>
-                <select [ngModel]="t.currentLocale" (change)="onLanguageChange($event.target)" [compareWith]="compareFn">
+                <select [ngModel]="t.currentLocale" (change)="onLanguageChange($event.target)" [compareWith]="compareFn" class="form-select bg-vito-green">
                     <option *ngFor="let lang of t.supportedLocales" [value]="lang">{{t.gt("lang_"+lang)}}</option>
                 </select>
             </ul>
