@@ -6,6 +6,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SecurityInterceptor } from 'src/app/security/authentication/security.interceptor';
 import { AnalysisService } from './analysis/analysis.service';
 import { PlotService } from './plot/plot.service';
+import { TranslationService } from './translation/translation.service';
 
 @NgModule({
   declarations: [],
@@ -17,6 +18,7 @@ import { PlotService } from './plot/plot.service';
     ResultService,
     PlotService,
     AnalysisService,
+    TranslationService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: SecurityInterceptor,
