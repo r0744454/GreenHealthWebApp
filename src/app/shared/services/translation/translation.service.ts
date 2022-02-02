@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import localeData from 'src/assets/locale/locale.json';
+import { locales } from 'src/assets/locale/locale.json';
 import { localeEn } from 'src/assets/locale/en.json';
 import { localeNl } from 'src/assets/locale/nl.json';
 import { localeFr } from 'src/assets/locale/fr.json';
@@ -10,21 +10,36 @@ import { localeFr } from 'src/assets/locale/fr.json';
 export class TranslationService {
   private translationMap: Map<string, string> = new Map<string, string>();
 
-  currentLanguage: string = "";
+  currentLocale: string = "";
+  supportedLocales: string[] = new Array<string>();
 
   constructor() {
     if(localStorage.getItem("defaultLocale") == null) {
-      this.currentLanguage = localeData.defaultLocale;
+      this.currentLocale = locales.defaultLocale;
     } else {
-      this.currentLanguage = localStorage.getItem("defaultLocale") ?? "en";
+      this.currentLocale = localStorage.getItem("defaultLocale") ?? "en";
     }
 
-    switch(this.currentLanguage) {
+    switch(this.currentLocale) {
       case "en": this.setLanguageEn(); break;
       case "nl": this.setLanguageNl(); break;
       case "fr": this.setLanguageFr(); break;
       default: this.setLanguageEn();
     }
+
+    for(var locale of locales.locales) {
+      console.log(locale.locale);
+      this.supportedLocales.push(locale.locale);
+    }
+    console.log(this.supportedLocales);
+  }
+
+  getCurrentLang(): string {
+    return this.currentLocale;
+  }
+
+  getLocales(): string[] {
+    return this.supportedLocales;
   }
 
   setLanguageEn(): void {
@@ -32,6 +47,7 @@ export class TranslationService {
     for(var entry of localeEn.dict) {
       this.translationMap.set(entry.key, entry.meaning);
     }
+    localStorage.setItem("defaultLocale", localeEn.locale);
   }
 
   setLanguageNl(): void {
@@ -39,6 +55,7 @@ export class TranslationService {
     for(var entry of localeNl.dict) {
       this.translationMap.set(entry.key, entry.meaning);
     }
+    localStorage.setItem("defaultLocale", localeNl.locale);
   }
 
   setLanguageFr(): void {
@@ -46,9 +63,11 @@ export class TranslationService {
     for(var entry of localeFr.dict) {
       this.translationMap.set(entry.key, entry.meaning);
     }
+    localStorage.setItem("defaultLocale", localeFr.locale);
   }
 
-  switchLang(lang: string): void {
+  switchLocale(lang: string): void {
+    console.log("setting locale to: " + lang);
     switch(lang) {
       case "en": this.setLanguageEn(); break;
       case "nl": this.setLanguageNl(); break;

@@ -8,20 +8,20 @@
                     <div class="alert alert-danger mt-1" *ngIf="formError">{{t.gt("enter_name_valid")}}</div>
                 </div>
                 <div class="form-group mt-2">
-                    <button class="btn btn-vito-green" type="submit">Create new plot</button>
+                    <button class="btn btn-vito-green" type="submit">{{t.gt("create_plot_submit")}}</button>
                 </div>
             </form>
         </div>
         <div class="col col-12 col-md-6">
             <form #defaultPlotForm="ngForm" (ngSubmit)="onSubmitDefault(defaultPlotForm)">
                 <div class="form-group">
-                    <label for="defaultPlotInput">Default plot</label>
+                    <label for="defaultPlotInput">{{t.gt("default_plot_form")}}</label>
                     <select [(ngModel)]="defaultPlot" [compareWith]="compareFn" class="form-select" name="defaultPlot" id="defaultPlotInput">
                         <option *ngFor="let plot of plots" [ngValue]="plot">{{plot.location}}</option>
                     </select>
                 </div>
                 <div class="form-group mt-2">
-                    <button class="btn btn-vito-green" type="submit">Save</button>
+                    <button class="btn btn-vito-green" type="submit">{{t.gt("default_plot_save")}}</button>
                 </div>
             </form>
         </div>
