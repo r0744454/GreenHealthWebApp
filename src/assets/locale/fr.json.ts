@@ -29,13 +29,13 @@ export const localeFr: Locale = {
         {key: "navbar_login", meaning: "Connexion"},
         {key: "navbar_logout", meaning: "Déconnexion"},
         {key: "navbar_dashboard", meaning: "Tableau de bord"},
-        
+
         //footer
         {key: "footer_made_by", meaning: "Faite par "},
         {key: "footer_collab_with", meaning: " en collaboration avec "},
 
         //homepage
-        {key: "home_description", meaning: "For project4.0 we received the challenge from Vito to recognize different plants and their growthstages."},
+        {key: "home_description", meaning: "Pour le projet4.0, Vito nous a lancé le défi de reconnaître différentes plantes et leurs stades de croissance."},
 
 
         //plot-overview
