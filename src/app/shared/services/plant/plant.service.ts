@@ -32,4 +32,8 @@ export class PlantService {
   patchImage(plant: Plant, image: FormData): Observable<Plant> {
     return this.httpClient.patch<Plant>(ConnectionStrings.apiUrl + "Plants/" + plant.id + "/image", image);
   }
+
+  deletePlant(id: number) {
+    return this.httpClient.delete(ConnectionStrings.apiUrl + "Plants/" + id);
+  }
 }

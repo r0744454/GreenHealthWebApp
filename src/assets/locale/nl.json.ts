@@ -24,7 +24,7 @@ export const localeNl: Locale = {
         //navbar
         {key: "navbar_name", meaning: "Welkom §"},
         {key: "navbar_home", meaning: "Home"},
-        {key: "navbar_plots", meaning: "Plots"},
+        {key: "navbar_plots", meaning: "Percelen"},
         {key: "navbar_upload", meaning: "Uploaden"},
         {key: "navbar_login", meaning: "Inloggen"},
         {key: "navbar_logout", meaning: "Uitloggen"},
@@ -40,7 +40,7 @@ export const localeNl: Locale = {
         //plot-overview
         {key: "enter_name_valid", meaning: "Geef een geldige naam op"},
         {key: "plotname", meaning: "Plotnaam"},
-        {key: "create_plot_submit", meaning: "Maak nieuwe plot"},
+        {key: "create_plot_submit", meaning: "Maak nieuw perceel"},
         {key: "default_plot_form", meaning: "Verander standaardplot"},
         {key: "default_plot_save", meaning: "Slaag wijzigingen op"},
 
@@ -65,8 +65,9 @@ export const localeNl: Locale = {
         {key: "upload_title", meaning: "Analyseer een afbeelding..."},
         {key: "upload_form_image_label", meaning: "Neem een foto of selecteer een afbeelding"},
         {key: "upload_form_plot_label", meaning: "Perceel"},
-        {key: "upload_form_submit", meaning: "Analyseer afbeelding"},
+        {key: "upload_form_submit", meaning: "Upload en analyseer afbeelding"},
         {key: "upload_form_error", meaning: "Selecteer een geldige afbeelding"},
+        {key: "upload_form_submit_no_analysis", meaning: "Upload zonder analyse"},
 
         //loginform
         {key: "login_title", meaning: "Log in..."},
@@ -82,5 +83,12 @@ export const localeNl: Locale = {
         {key: "sort-by-date", meaning: "Sorteer op datum"},
         {key: "sort-low-high", meaning: "oudste eerst"},
         {key: "sort-high-low", meaning: "nieuwste eerst"},
+        {key: "button_analyse_all", meaning: "Analyseer alles"},
+
+        //plot-card
+        {key: "image_status_hover_ana", meaning: "Deze afbeelding is geanalyseerd"},
+        {key: "image_status_hover_nana", meaning: "Deze afbeelding is nog niet geanalyseerd"},
+        {key: "delete_plant_confirmation", meaning: "Druk nog eens om te bevestigen"},
+        {key: "delete_plant_cancel", meaning: "Annuleren"},
     ]
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Plant } from 'src/app/shared/models/Plant';
 import { TranslationService } from 'src/app/shared/services/translation/translation.service';
 import { ConnectionStrings } from 'src/app/Globals';
@@ -10,8 +10,10 @@ import { ConnectionStrings } from 'src/app/Globals';
 })
 export class PlantCardComponent implements OnInit {
   @Input() plant: Plant = {id: 0, plotId: 0, timestamp: ""}
+  @Output() deletionId: EventEmitter<number> = new EventEmitter<number>();
 
-  imgUrl: string = "../../../assets/img/picture.jpeg"
+  imgUrl: string = "../../../assets/img/picture.jpeg";
+  confirmingDelete: boolean = false;
 
   constructor(public t: TranslationService) { }
 
@@ -24,6 +26,19 @@ export class PlantCardComponent implements OnInit {
       return "../../../assets/img/picture.jpeg";
     }
     return ConnectionStrings.blobUrl + this.plant.imagePath;
+  }
+
+  deletePlant(): void {
+    if(!this.confirmingDelete) {
+      this.confirmingDelete = true;
+      return;
+    }
+    this.deletionId.emit(this.plant.id);
+    this.confirmingDelete = false;
+  }
+
+  resetConfirmation(): void {
+    this.confirmingDelete = false;
   }
 
 }

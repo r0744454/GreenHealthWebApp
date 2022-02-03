@@ -41,7 +41,7 @@ export class UploadComponent implements OnInit {
     })
   }
 
-  onSubmit(): void {
+  onAnalysis(): void {
     this.isSubmitted = true;
     if(this.plantImage.size == 0) {
       this.isSubmitted = false;
@@ -59,6 +59,32 @@ export class UploadComponent implements OnInit {
         this.analysisService.imageString = this.imgSource;
         this.analysisService.plant = this.plant;
         this.router.navigateByUrl("/user/analysis");
+      },
+      err => {
+        console.log(err);
+      });
+    },
+    err => {
+      console.log(err);
+    });
+  }
+
+  onUpload() {
+    this.isSubmitted = true;
+    if(this.plantImage.size == 0) {
+      this.isSubmitted = false;
+      this.submitError = true;
+      return;
+    }
+
+    var data = new FormData();
+    data.append('image', this.plantImage);
+    this.plant.plotId = this.defaultPlot.id;
+
+    this.plantService.postPlant(this.plant).subscribe(r1 => {
+      this.plant = r1;
+      this.plantService.patchImage(this.plant, data).subscribe(r2 => {
+        window.location.reload();
       },
       err => {
         console.log(err);

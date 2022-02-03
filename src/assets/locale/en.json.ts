@@ -66,8 +66,9 @@ export const localeEn: Locale = {
         {key: "upload_title", meaning: "Analyse an image..."},
         {key: "upload_form_image_label", meaning: "Take a photo or select an image"},
         {key: "upload_form_plot_label", meaning: "Plot"},
-        {key: "upload_form_submit", meaning: "Analyze image"},
+        {key: "upload_form_submit", meaning: "Upload and analyse"},
         {key: "form_error", meaning: "Please select a valid image"},
+        {key: "upload_form_submit_no_analysis", meaning: "Upload without analysis"},
 
         //loginform
         {key: "login_title", meaning: "Login..."},
@@ -83,5 +84,12 @@ export const localeEn: Locale = {
         {key: "sort-by-date", meaning: "Sort by date"},
         {key: "sort-low-high", meaning: "oldest first"},
         {key: "sort-high-low", meaning: "newest first"},
+        {key: "button_analyse_all", meaning: "Analyse all"},
+
+        //plot-card
+        {key: "image_status_hover_ana", meaning: "This image has been analysed"},
+        {key: "image_status_hover_nana", meaning: "This image has not yet been analysed"},
+        {key: "delete_plant_confirmation", meaning: "Press icon again to confirm"},
+        {key: "delete_plant_cancel", meaning: "Cancel"},
     ]
 }
