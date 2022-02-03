@@ -64,7 +64,7 @@ export const localeNl: Locale = {
         //upload
         {key: "upload_title", meaning: "Analyseer een afbeelding..."},
         {key: "upload_form_image_label", meaning: "Neem een foto of selecteer een afbeelding"},
-        {key: "upload_form_plot_label", meaning: "Plot"},
+        {key: "upload_form_plot_label", meaning: "Perceel"},
         {key: "upload_form_submit", meaning: "Analyseer afbeelding"},
         {key: "upload_form_error", meaning: "Selecteer een geldige afbeelding"},
 
@@ -75,5 +75,12 @@ export const localeNl: Locale = {
         {key: "login_form_submit", meaning: "Log in"},
         {key: "alt_register", meaning: "... of registreer"},
         {key: "navigate_register", meaning: "Registreer"},
+
+        //plot-detail
+        {key: "return_previous", meaning: "Terug"},
+        {key: "plot-title-plot-location", meaning: "Perceel '§'"},
+        {key: "sort-by-date", meaning: "Sorteer op datum"},
+        {key: "sort-low-high", meaning: "oudste eerst"},
+        {key: "sort-high-low", meaning: "nieuwste eerst"},
     ]
 }

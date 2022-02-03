@@ -18,7 +18,7 @@ export class AnalysisComponent implements OnInit {
   speciesList: string[] = ["mais", "fles"]
   weekNumbers: number[] = [1,2,3,4,5,6]
   image: string = ""
-  plant: Plant = {id: 0, plotId: 0}
+  plant: Plant = {id: 0, plotId: 0, timestamp: ""}
 
   result: Result = {id: 0, growthStage: 0};
   accDisp: number = 0;

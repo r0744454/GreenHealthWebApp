@@ -10,7 +10,7 @@ export interface Plant {
     seasonId?: number,
     location?: string,
     imagePath?: string,
-    timestamp?: string,
+    timestamp: string,
 
     season?: Season,
     plot?: Plot,

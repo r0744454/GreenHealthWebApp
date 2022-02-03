@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-vito-green" (click)="navigateBack()"><span class="vicon-black-sm vicon-arrow-left"></span>{{t.gt("return_previous")}}</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-12 col-sm-6 col-md-4">
+            <h2>{{t.gt("plot-title-plot-location", [plot.location])}}</h2>
+        </div>
+        <div class="col col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+            <button class="btn btn-vito-green" (click)="reverseSort()">
+                {{t.gt("sort-by-date")}}<wbr> ({{(sortLowToHigh) ? t.gt("sort-low-high") : t.gt("sort-high-low")}})
+                <span class="vicon-black-md vicon-arrow-up" *ngIf="!sortLowToHigh"></span>
+                <span class="vicon-black-md vicon-arrow-down" *ngIf="sortLowToHigh"></span>
+            </button>
+        </div>
+        <div class="col col-12 col-md-4 d-none">
+            <button class="btn btn-vito-green" (click)="analyseAllPlants()">analyse all images</button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <app-plant-card class="col col-12 col-sm-6 col-md-4 col-lg-3 mt-3" *ngFor="let plant of $sortedPlants | async" [plant]="plant">
+        </app-plant-card>
+    </div>
+</div>
