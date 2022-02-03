@@ -28,7 +28,7 @@ export class UploadComponent implements OnInit {
   plots: Plot[] = new Array<Plot>();
   $plots: Subscription = new Subscription();
 
-  plant: Plant = {id: 0, plotId: 0}
+  plant: Plant = {id: 0, plotId: 0, timestamp: ""}
 
   imgSource: string = "";
 

@@ -6,6 +6,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { UserRoutingmodule } from './user-routing.module';
 import { PlotCardComponent } from './plot-card/plot-card.component';
 import { PlotOverviewComponent } from './plot-overview/plot-overview.component';
+import { PlotDetailComponent } from './plot-detail/plot-detail.component';
+import { PlantCardComponent } from './plant-card/plant-card.component';
 
 
 
@@ -15,6 +17,8 @@ import { PlotOverviewComponent } from './plot-overview/plot-overview.component';
     UploadComponent,
     PlotCardComponent,
     PlotOverviewComponent,
+    PlotDetailComponent,
+    PlantCardComponent,
   ],
   imports: [
     CommonModule,
@@ -24,6 +28,8 @@ import { PlotOverviewComponent } from './plot-overview/plot-overview.component';
   exports: [
     AnalysisComponent,
     UploadComponent,
+    PlotOverviewComponent,
+    PlotDetailComponent,
   ]
 })
 export class UserModule { }

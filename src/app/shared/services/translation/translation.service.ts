@@ -28,10 +28,8 @@ export class TranslationService {
     }
 
     for(var locale of locales.locales) {
-      console.log(locale.locale);
       this.supportedLocales.push(locale.locale);
     }
-    console.log(this.supportedLocales);
   }
 
   getCurrentLang(): string {
@@ -67,7 +65,6 @@ export class TranslationService {
   }
 
   switchLocale(lang: string): void {
-    console.log("setting locale to: " + lang);
     switch(lang) {
       case "en": this.setLanguageEn(); break;
       case "nl": this.setLanguageNl(); break;

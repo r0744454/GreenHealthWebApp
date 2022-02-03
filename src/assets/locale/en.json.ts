@@ -76,5 +76,12 @@ export const localeEn: Locale = {
         {key: "login_form_submit", meaning: "Login"},
         {key: "alt_register", meaning: "... or register"},
         {key: "navigate_register", meaning: "Register"},
+
+        //plot-detail
+        {key: "return_previous", meaning: "Back"},
+        {key: "plot-title-plot-location", meaning: "Plot '§'"},
+        {key: "sort-by-date", meaning: "Sort by date"},
+        {key: "sort-low-high", meaning: "oldest first"},
+        {key: "sort-high-low", meaning: "newest first"},
     ]
 }

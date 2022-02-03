@@ -1,0 +1,17 @@
+<div class="card">
+    <img [src]="imgUrl" class="card-img-top" height="150" alt="">
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <span   [class]="'card-link vicon-image-processing-1' + ((plant.resultId==null) ? ' vicon-danger-xl' : ' vicon-xl')"
+                [title]="((plant.resultId==null) ? 'This image has not yet been analysed' : 'This image has been analysed')"></span>
+            </li>
+            <li class="list-group-item" *ngIf="!!plant.result">
+                {{t.gt("prediction_species", [t.gt("species_"+plant.result.species)])}}
+            </li>
+            <li class="list-group-item" *ngIf="!!plant.result">
+                {{t.gt("growthstage_naming", [plant.result.growthStage.toString()])}}
+            </li>
+        </ul>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ConnectionStrings } from 'src/app/Globals';
 import { Plot } from '../../models/Plot';
+import { Plant } from '../../models/Plant';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,10 @@ export class PlotService {
 
   getPlots(): Observable<Plot[]> {
     return this.httpClient.get<Plot[]>(ConnectionStrings.apiUrl + "Plots");
+  }
+
+  getPlotPlants(id: number): Observable<Plant[]> {
+    return this.httpClient.get<Plant[]>(ConnectionStrings.apiUrl + "Plots/" + id + "/Plants");
   }
 
   putPlot(plot: Plot): void {
