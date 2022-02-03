@@ -8,6 +8,7 @@ import { PlotCardComponent } from './plot-card/plot-card.component';
 import { PlotOverviewComponent } from './plot-overview/plot-overview.component';
 import { PlotDetailComponent } from './plot-detail/plot-detail.component';
 import { PlantCardComponent } from './plant-card/plant-card.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -19,6 +20,7 @@ import { PlantCardComponent } from './plant-card/plant-card.component';
     PlotOverviewComponent,
     PlotDetailComponent,
     PlantCardComponent,
+    DashboardComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +32,7 @@ import { PlantCardComponent } from './plant-card/plant-card.component';
     UploadComponent,
     PlotOverviewComponent,
     PlotDetailComponent,
+    DashboardComponent,
   ]
 })
 export class UserModule { }

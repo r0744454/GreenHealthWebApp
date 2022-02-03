@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, Subject, Subscription } from 'rxjs';
 import { Plant } from 'src/app/shared/models/Plant';
 import { Plot } from 'src/app/shared/models/Plot';
+import { PlantService } from 'src/app/shared/services/plant/plant.service';
 import { PlotService } from 'src/app/shared/services/plot/plot.service';
 import { TranslationService } from 'src/app/shared/services/translation/translation.service';
 
@@ -23,7 +24,7 @@ export class PlotDetailComponent implements OnInit {
   $sortedPlants: Observable<Plant[]> = this.plants.asObservable();
   sortLowToHigh = true;
 
-  constructor(public t: TranslationService, private plotService: PlotService, private route: ActivatedRoute, private router: Router) { }
+  constructor(public t: TranslationService, private plotService: PlotService, private route: ActivatedRoute, private router: Router, private plantService: PlantService) { }
 
   ngOnInit(): void {
     this.$accessiblePlants = this.$sortedPlants.subscribe(
@@ -68,6 +69,25 @@ export class PlotDetailComponent implements OnInit {
         }
       )
     );
+  }
+
+  analyseAllPlants(): void {
+    var a = this.accessiblePlants;
+    for(var b of a) {
+      this.plantService.getPlantResult(b.id).subscribe(
+        r => {
+          a.forEach(
+            x => {
+              if(x.id == b.id) {
+                x.result = r;
+                x.resultId = r.id;
+              }
+            }
+          )
+          this.plants.next(a)
+        }
+      )
+    }
   }
 
 }
