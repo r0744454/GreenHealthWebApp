@@ -2,9 +2,14 @@
     <img [src]="imgUrl" class="card-img-top" height="150" alt="">
     <div class="card-body">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
                 <span   [class]="'card-link vicon-image-processing-1' + ((plant.resultId==null) ? ' vicon-danger-xl' : ' vicon-xl')"
-                [title]="((plant.resultId==null) ? 'This image has not yet been analysed' : 'This image has been analysed')"></span>
+                [title]="((plant.resultId==null) ? t.gt('image_status_hover_nana') : t.gt('image_status_hover_ana'))"></span>
+                <i class="bi bi-trash fs-1 text-danger" (click)="deletePlant()"></i>
+            </li>
+            <li class="list-group-item d-flex flex-column justify-content-center" *ngIf="confirmingDelete">
+                <p>{{t.gt("delete_plant_confirmation")}}</p>
+                <button class="btn btn-danger" (click)="resetConfirmation()">{{t.gt("delete_plant_cancel")}}</button>
             </li>
             <li class="list-group-item" *ngIf="!!plant.result">
                 {{t.gt("prediction_species", [t.gt("species_"+plant.result.species)])}}

@@ -83,6 +83,12 @@ export const localeNl: Locale = {
         {key: "sort-by-date", meaning: "Sorteer op datum"},
         {key: "sort-low-high", meaning: "oudste eerst"},
         {key: "sort-high-low", meaning: "nieuwste eerst"},
-        {key: "button_analyse_all", meaning: "Analyse alles"},
+        {key: "button_analyse_all", meaning: "Analyseer alles"},
+
+        //plot-card
+        {key: "image_status_hover_ana", meaning: "Deze afbeelding is geanalyseerd"},
+        {key: "image_status_hover_nana", meaning: "Deze afbeelding is nog niet geanalyseerd"},
+        {key: "delete_plant_confirmation", meaning: "Druk nog eens om te bevestigen"},
+        {key: "delete_plant_cancel", meaning: "Annuleren"},
     ]
 }

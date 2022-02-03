@@ -101,4 +101,15 @@ export class PlotDetailComponent implements OnInit {
     }
   }
 
+  deletePlant(id: number): void {
+    this.plantService.deletePlant(id).subscribe(
+      x => {
+        var a = this.accessiblePlants.findIndex(x => x.id == id);
+        if(a == null) return;
+        this.accessiblePlants.splice(a, 1)
+        this.plants.next(this.accessiblePlants);
+      }
+    )
+  }
+
 }
