@@ -85,5 +85,11 @@ export const localeFr: Locale = {
         {key: "sort-low-high", meaning: "le plus ancien a premier"},
         {key: "sort-high-low", meaning: "le plus récent a premier"},
         {key: "button_analyse_all", meaning: "Analyse toute"},
+
+        //plot-card
+        {key: "image_status_hover_ana", meaning: "Cette image a été analysée"},
+        {key: "image_status_hover_nana", meaning: "Cette image n'as pas été analysée"},
+        {key: "delete_plant_confirmation", meaning: "Appuyez à nouveau pour confirmer"},
+        {key: "delete_plant_cancel", meaning: "Annuler"},
     ]
 }
