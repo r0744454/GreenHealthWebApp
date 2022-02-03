@@ -79,20 +79,25 @@ export class PlotDetailComponent implements OnInit {
 
   analyseAllPlants(): void {
     var a = this.accessiblePlants;
-    for(var b of a) {
-      this.plantService.getPlantResult(b.id).subscribe(
-        r => {
-          a.forEach(
-            x => {
-              if(x.id == b.id) {
-                x.result = r;
-                x.resultId = r.id;
+    for(let b of a) {
+      if(b.imagePath != null && b.resultId == null) {
+        this.plantService.getPlantResult(b.id).subscribe(
+          r => {
+            this.accessiblePlants.forEach(
+              x => {
+                if(x.id == b.id) {
+                  x.result = r;
+                  x.resultId = r.id;
+                }
               }
-            }
-          )
-          this.plants.next(a);
-        }
-      )
+            )
+            this.plants.next(this.accessiblePlants);
+          },
+          e => {
+            console.log(e);
+          }
+        );
+      }
     }
   }
 

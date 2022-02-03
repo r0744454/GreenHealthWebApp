@@ -84,5 +84,6 @@ export const localeFr: Locale = {
         {key: "sort-by-date", meaning: "Trier par date"},
         {key: "sort-low-high", meaning: "le plus ancien a premier"},
         {key: "sort-high-low", meaning: "le plus récent a premier"},
+        {key: "button_analyse_all", meaning: "Analyse toute"},
     ]
 }

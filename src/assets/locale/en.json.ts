@@ -84,5 +84,6 @@ export const localeEn: Locale = {
         {key: "sort-by-date", meaning: "Sort by date"},
         {key: "sort-low-high", meaning: "oldest first"},
         {key: "sort-high-low", meaning: "newest first"},
+        {key: "button_analyse_all", meaning: "Analyse all"},
     ]
 }
