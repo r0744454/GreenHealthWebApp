@@ -22,7 +22,7 @@ export class PlotDetailComponent implements OnInit {
   $accessiblePlants: Subscription = new Subscription();
   plants: Subject<Plant[]> = new Subject<Plant[]>();
   $sortedPlants: Observable<Plant[]> = this.plants.asObservable();
-  sortLowToHigh = true;
+  sortLowToHigh = false;
 
   constructor(public t: TranslationService, private plotService: PlotService, private route: ActivatedRoute, private router: Router, private plantService: PlantService) { }
 
@@ -39,14 +39,20 @@ export class PlotDetailComponent implements OnInit {
         this.plot = r;
         this.$plants = this.plotService.getPlotPlants(r.id).subscribe(
           r => {
-            this.plants.next(r.sort(this.sortFn))
+            this.plants.next(r.sort(
+              (a, b) => {
+                return ((this.sortLowToHigh) ? 1 : -1) * this.sortFn(a, b);
+              }));
           }
-        )
+        );
       }
     );
   }
 
   sortFn(a: Plant, b: Plant): number {
+    if(a.timestamp == null) return -1;
+    if(b.timestamp == null) return 1;
+
     return Date.parse(
       a.timestamp.slice(
         0, a.timestamp.length-3)) -
@@ -84,7 +90,7 @@ export class PlotDetailComponent implements OnInit {
               }
             }
           )
-          this.plants.next(a)
+          this.plants.next(a);
         }
       )
     }

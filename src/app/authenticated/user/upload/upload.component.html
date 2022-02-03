@@ -2,7 +2,7 @@
     <div class="col col-12 col-md-8 d-flex flex-column align-items-center">
         <h2>{{t.gt("upload_title")}}</h2>
         <img *ngIf="imgSource" src="{{imgSource}}" alt="" width="300" height="300" id="displayImage">
-        <form (ngSubmit)="onSubmit()" #uploadForm="ngForm" class="mt-2">
+        <form #uploadForm="ngForm" class="mt-2">
             <div class="form-group">
                 <label for="imageInput">{{t.gt("upload_form_image_label")}}</label>
                 <input type="file" accept="image/*" capture="user" name="imageInput" class="form-control" id="imageInput" (change)="onRefreshFile($event)" required>
@@ -13,8 +13,13 @@
                     <option *ngFor="let plot of plots" [ngValue]="plot">{{plot.location}}</option>
                 </select>
             </div>
-            <div class="d-flex justify-content-center mt-2">
-                <button type="submit" class="btn btn-vito-green" [disabled]="submitError || isSubmitted">{{t.gt("upload_form_submit")}}</button>
+            <div class="row mt-2">
+                <div class="col col-12 col-sm-6 d-flex justify-content-center mb-3 mb-sm-0">
+                    <button (click)="onAnalysis()" class="btn btn-md btn-vito-green" [disabled]="submitError || isSubmitted">{{t.gt("upload_form_submit")}}</button>
+                </div>
+                <div class="col col-12 col-sm-6 d-flex justify-content-center">
+                    <button (click)="onUpload()" class="btn btn-vito-green" [disabled]="submitError || isSubmitted">{{t.gt("upload_form_submit_no_analysis")}}</button>
+                </div>
             </div>
             <div class="bg-danger" *ngIf="submitError">
                 <p>{{t.gt("upload_form_error")}}</p>

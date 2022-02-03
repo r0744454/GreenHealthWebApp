@@ -66,8 +66,9 @@ export const localeEn: Locale = {
         {key: "upload_title", meaning: "Analyse an image..."},
         {key: "upload_form_image_label", meaning: "Take a photo or select an image"},
         {key: "upload_form_plot_label", meaning: "Plot"},
-        {key: "upload_form_submit", meaning: "Analyze image"},
+        {key: "upload_form_submit", meaning: "Upload and analyse"},
         {key: "form_error", meaning: "Please select a valid image"},
+        {key: "upload_form_submit_no_analysis", meaning: "Upload without analysis"},
 
         //loginform
         {key: "login_title", meaning: "Login..."},

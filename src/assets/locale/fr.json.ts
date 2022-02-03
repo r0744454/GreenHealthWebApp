@@ -66,8 +66,9 @@ export const localeFr: Locale = {
         {key: "upload_title", meaning: "Analyser une image..."},
         {key: "upload_form_image_label", meaning: "Prener une photo ou sélectionner une image"},
         {key: "upload_form_plot_label", meaning: "Parcelle"},
-        {key: "upload_form_submit", meaning: "Analyse l'image"},
+        {key: "upload_form_submit", meaning: "Télécharge et analyse l'image"},
         {key: "form_error", meaning: "Sélectionner une image valide"},
+        {key: "upload_form_submit_no_analysis", meaning: "Télécharge sans analyser"},
 
         //loginform
         {key: "login_title", meaning: "Connexion..."},

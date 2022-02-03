@@ -24,7 +24,7 @@ export const localeNl: Locale = {
         //navbar
         {key: "navbar_name", meaning: "Welkom §"},
         {key: "navbar_home", meaning: "Home"},
-        {key: "navbar_plots", meaning: "Plots"},
+        {key: "navbar_plots", meaning: "Percelen"},
         {key: "navbar_upload", meaning: "Uploaden"},
         {key: "navbar_login", meaning: "Inloggen"},
         {key: "navbar_logout", meaning: "Uitloggen"},
@@ -40,7 +40,7 @@ export const localeNl: Locale = {
         //plot-overview
         {key: "enter_name_valid", meaning: "Geef een geldige naam op"},
         {key: "plotname", meaning: "Plotnaam"},
-        {key: "create_plot_submit", meaning: "Maak nieuwe plot"},
+        {key: "create_plot_submit", meaning: "Maak nieuw perceel"},
         {key: "default_plot_form", meaning: "Verander standaardplot"},
         {key: "default_plot_save", meaning: "Slaag wijzigingen op"},
 
@@ -65,8 +65,9 @@ export const localeNl: Locale = {
         {key: "upload_title", meaning: "Analyseer een afbeelding..."},
         {key: "upload_form_image_label", meaning: "Neem een foto of selecteer een afbeelding"},
         {key: "upload_form_plot_label", meaning: "Perceel"},
-        {key: "upload_form_submit", meaning: "Analyseer afbeelding"},
+        {key: "upload_form_submit", meaning: "Upload en analyseer afbeelding"},
         {key: "upload_form_error", meaning: "Selecteer een geldige afbeelding"},
+        {key: "upload_form_submit_no_analysis", meaning: "Upload zonder analyse"},
 
         //loginform
         {key: "login_title", meaning: "Log in..."},
