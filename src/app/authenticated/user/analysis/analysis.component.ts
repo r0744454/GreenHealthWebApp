@@ -45,8 +45,12 @@ export class AnalysisComponent implements OnInit {
     this.correcting = !this.correcting;
   }
 
+  sanitizeGrowthStage(a: string): number {
+    return parseInt(a.split(' ')[1]);
+  }
+
   onGrowthStageChange(t: any): void {
-    this.result.correctedGrowthStage = t.value;
+    this.result.correctedGrowthStage = this.sanitizeGrowthStage(t.value);
   }
 
   onSpeciesChange(t: any): void {
@@ -54,8 +58,11 @@ export class AnalysisComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.resultService.putResult(this.result);
-    this.router.navigateByUrl('/');
+    this.resultService.putResult(this.result).subscribe(
+      r => {
+        this.router.navigateByUrl('/');
+      }
+    )
   }
 
 }

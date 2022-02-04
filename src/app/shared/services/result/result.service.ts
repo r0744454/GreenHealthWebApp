@@ -15,7 +15,7 @@ export class ResultService {
     return this.httpClient.get<Result>(ConnectionStrings.apiUrl + "Results/" + id);
   }
 
-  putResult(result: Result): void {
-    this.httpClient.put(ConnectionStrings.apiUrl + "Results/" + result.id, result);
+  putResult(result: Result): Observable<Result> {
+    return this.httpClient.put<Result>(ConnectionStrings.apiUrl + "Results/" + result.id, result);
   }
 }
