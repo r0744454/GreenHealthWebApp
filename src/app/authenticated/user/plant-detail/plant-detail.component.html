@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row mb-2">
+        <div class="col">
+            <button class="btn btn-vito-green" (click)="navigateBack()"><span class="vicon-black-sm vicon-arrow-left"></span>{{t.gt("return_previous")}}</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-12 col-md-4 d-flex justify-content-center">
+            <img [src]="imgUrl" width="250" height="250" class="mw-100">
+        </div>
+        <div class="col col-12 col-md-8 text-center" *ngIf="!plant.result">
+            <p>{{t.gt("image_status_hover_nana")}}</p>
+            <button class="btn btn-vito-green" (click)="analysePlant()">{{t.gt("pd_analyse_confirm")}}</button>
+        </div>
+        <div class="col col-12 col-md-8 text-center" *ngIf="plant.result">
+            <div class="row">
+                <div class="col col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col col-6 text-end">{{t.gt("pd_growthstage_naming")}}</div>
+                        <div class="col col-6 text-start">{{result.correctedGrowthStage ?? result.growthStage}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-6 text-end">{{t.gt("pd_species_naming")}}</div>
+                        <div class="col col-6 text-start">{{t.gt("species_"+(result.correctedSpecies ?? result.species))}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-6 text-end">{{t.gt("pd_accuracy_naming")}}</div>
+                        <div class="col col-6 text-start">{{accDisp}}</div>
+                    </div>
+                </div>
+                <div class="col col-12 col-lg-6">
+                    <form (ngSubmit)="onSubmit()" #correctionForm="ngForm">
+                        <div class="form-group">
+                            <label for="resultInput">{{t.gt("p_growthstage_correction")}}</label>
+                            <select class="form-select" id="resultInput" (change)="onGrowthStageChange($event.target)">
+                                <option *ngFor="let week of weekNumbers" [ngValue]="week" [selected]="result.growthStage == week">{{t.gt("growthstage_naming", [week.toString()])}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="speciesInput">{{t.gt("p_species_correction")}}</label>
+                            <select class="form-select mw-50" id="speciesInput" (change)="onSpeciesChange($event.target)">
+                                <option *ngFor="let species of speciesList" [ngValue]="species" [selected]="result.species == species">{{t.gt("species_"+species)}}</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-center" id="correctionButton">
+                            <button type="submit" class="btn btn-vito-green mt-3">{{t.gt("correction_save")}}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

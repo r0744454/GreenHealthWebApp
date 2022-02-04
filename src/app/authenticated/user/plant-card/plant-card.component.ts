@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Plant } from 'src/app/shared/models/Plant';
 import { TranslationService } from 'src/app/shared/services/translation/translation.service';
 import { ConnectionStrings } from 'src/app/Globals';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-plant-card',
@@ -15,7 +16,7 @@ export class PlantCardComponent implements OnInit {
   imgUrl: string = "../../../assets/img/picture.jpeg";
   confirmingDelete: boolean = false;
 
-  constructor(public t: TranslationService) { }
+  constructor(public t: TranslationService, public r: Router) { }
 
   ngOnInit(): void {
     this.imgUrl = this.getImgUrl();
@@ -39,6 +40,10 @@ export class PlantCardComponent implements OnInit {
 
   resetConfirmation(): void {
     this.confirmingDelete = false;
+  }
+
+  navigateDetail(): void {
+    this.r.navigateByUrl("user/plots/"+this.plant.plotId+'/'+this.plant.id);
   }
 
 }

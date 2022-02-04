@@ -94,5 +94,11 @@ export const localeFr: Locale = {
 
         //dashboard
         {key: "dashboard_file_powerbi", meaning: "Ficher Power Bi"},
+
+        //plant-detail
+        {key: "pd_growthstage_naming", meaning: "Semaine:"},
+        {key: "pd_species_naming", meaning: "Espèce:"},
+        {key: "pd_accuracy_naming", meaning: "Confiance:"},
+        {key: "pd_analyse_confirm", meaning: "Analyse"},
     ]
 }

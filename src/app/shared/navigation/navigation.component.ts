@@ -31,6 +31,7 @@ export class NavigationComponent implements OnInit {
   logout() {
     this.authService.logout();
     this.isLoggedIn = this.authService.isLoggedIn();
+    this.router.navigateByUrl("/");
   }
 
   onLanguageChange(e: any) {
