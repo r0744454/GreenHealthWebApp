@@ -48,14 +48,20 @@ The connection string used to communicate with the API is saved in the `src/Glob
 This project has been developed with the principles of Angular modularity in mind. Modularity is a principle wherein code with related functionality is grouped together. There are several modules containing different aspects of the application.  
 More info on these modules and their child modules can be found in the README in each of the corresponding directories inside the `src` folder.
 
-### SharedModule
+### **SharedModule**
 The SharedModule contains all code that is shared between all the users. This includes API services and modules such as the navbar, styles, etc.
 
-### SecurityModule
+Link: [**SharedModule**](src/app/shared/README.md)
+
+### **SecurityModule**
 The SecurityModule contains all code related to user login, registration, authentication and route guards.
 
-### AuthenticatedModule
+Link: [**SecurityModule**](src/app/security/README.md)
+
+### **AuthenticatedModule**
 The AuthenticatedModule contains all code related to users that are authenticated and logged in, such as the analyze and overview page.
+
+Link: [**AuthenticatedModule**](src/app/authenticated/README.md)
 
 ## Styles
 
