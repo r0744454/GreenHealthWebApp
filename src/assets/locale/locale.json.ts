@@ -13,8 +13,8 @@ export const locales: localeDefinition = {
     localeVersion: "0.0.0",
     defaultLocale: "en",
     locales: [
-        {locale: "en", file: "en.json"},
-        {locale: "nl", file: "nl.json"},
-        {locale: "fr", file: "fr.json"}
+        {locale: "en", file: "en.json.ts"},
+        {locale: "nl", file: "nl.json.ts"},
+        {locale: "fr", file: "fr.json.ts"}
     ]
 }

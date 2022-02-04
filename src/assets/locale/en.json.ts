@@ -91,5 +91,8 @@ export const localeEn: Locale = {
         {key: "image_status_hover_nana", meaning: "This image has not yet been analysed"},
         {key: "delete_plant_confirmation", meaning: "Press icon again to confirm"},
         {key: "delete_plant_cancel", meaning: "Cancel"},
+
+        //dashboard
+        {key: "dashboard_file_powerbi", meaning: "Power Bi file"},
     ]
 }
