@@ -29,6 +29,7 @@ export const localeNl: Locale = {
         {key: "navbar_login", meaning: "Inloggen"},
         {key: "navbar_logout", meaning: "Uitloggen"},
         {key: "navbar_dashboard", meaning: "Dashboard"},
+        {key: "navbar_register", meaning: "Registreer"},
 
         //footer
         {key: "footer_made_by", meaning: "Gemaakt door "},
@@ -36,6 +37,17 @@ export const localeNl: Locale = {
 
         //homepage
         {key: "home_description", meaning: "Voor project4.0 hebben we de opdracht gekregen van Vito om verschillende planten hun groeistadia te herkennen."},
+
+        //registration
+        {key: "register_title", meaning: "Registreer"},
+        {key: "register_demo_warning", meaning: "Voor demonstratiedoeleinden zullen nieuwe gebruikers automatisch worden toegevoegd aan een bestaande organisatie"},
+        {key: "register_form_fn", meaning: "Voornaam"},
+        {key: "register_form_ln", meaning: "Achternaam"},
+        {key: "register_form_mail", meaning: "Email"},
+        {key: "register_form_addr", meaning: "Adres"},
+        {key: "register_form_pass", meaning: "Wachtwoord"},
+        {key: "register_form_warn", meaning: "Kijk na dat je alle velden correct hebt ingevuld"},
+        {key: "register_form_submit", meaning: "Registreer"},
 
         //plot-overview
         {key: "enter_name_valid", meaning: "Geef een geldige naam op"},
