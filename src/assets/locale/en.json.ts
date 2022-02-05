@@ -29,6 +29,7 @@ export const localeEn: Locale = {
         {key: "navbar_login", meaning: "Login"},
         {key: "navbar_logout", meaning: "Logout"},
         {key: "navbar_dashboard", meaning: "Dashboard"},
+        {key: "navbar_register", meaning: "Register"},
         
         //footer
         {key: "footer_made_by", meaning: "Made by "},
@@ -37,6 +38,16 @@ export const localeEn: Locale = {
         //homepage
         {key: "home_description", meaning: "For project4.0 we received the challenge from Vito to recognize different plants and their growthstages."},
 
+        //registration
+        {key: "register_title", meaning: "Register"},
+        {key: "register_demo_warning", meaning: "For demonstration purposes new users will be automatically added to a pre existing organisation"},
+        {key: "register_form_fn", meaning: "First name"},
+        {key: "register_form_ln", meaning: "Last name"},
+        {key: "register_form_mail", meaning: "Email"},
+        {key: "register_form_addr", meaning: "Address"},
+        {key: "register_form_pass", meaning: "Password"},
+        {key: "register_form_warn", meaning: "Check that you have correctly filled in all fields"},
+        {key: "register_form_submit", meaning: "Register"},
 
         //plot-overview
         {key: "enter_name_valid", meaning: "Please enter a valid name"},

@@ -64,4 +64,8 @@ export class AuthService {
   authenticate(user: User): Observable<AuthResponse> {
     return this.httpClient.post<AuthResponse>(ConnectionStrings.apiUrl + "User/authenticate", user);
   }
+
+  register(user: User): Observable<AuthResponse> {
+    return this.httpClient.post<AuthResponse>(ConnectionStrings.apiUrl + "User/register", user);
+  }
 }
