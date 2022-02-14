@@ -10,7 +10,7 @@ export interface localeDefinition {
 }
 
 export const locales: localeDefinition = {
-    localeVersion: "0.0.0",
+    localeVersion: "0.1.0",
     defaultLocale: "en",
     locales: [
         {locale: "en", file: "en.json.ts"},
