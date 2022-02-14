@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>greenhealth-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">greenhealth-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="green-health-ai-platform-ui">Green Health AI Platform UI</h1>
+<p>This is the web app for the Green Health AI Platform. The app allow users to upload an image of a plant and to analyze the properties of that plant.</p>
+<h2 id="development-setup-guide">Development Setup Guide</h2>
+<p>To get started with the project the following tools have to be installed:</p>
+<ul>
+<li>Node.js</li>
+<li>npm</li>
+<li>Angular CLI</li>
+</ul>
+<h3 id="windows-installation-chocolatey">Windows Installation (Chocolatey)</h3>
+<div><pre class="line-numbers"><code class="language-none">choco install -y nodejs
+
+npm i -g &#64;angular/cli</code></pre></div><h3 id="linux-installation-debian">Linux Installation (Debian)</h3>
+<div><pre class="line-numbers"><code class="language-none">apt install nodejs
+
+apt install npm
+
+npm i -g &#64;angular/cli</code></pre></div><h3 id="project-setup">Project Setup</h3>
+<p>Next, clone the project from the github with <code>git clone</code> and go into the project folder. Then install the project dependencies with <code>npm install</code>.  </p>
+<p>Finally, use <code>ng serve</code> or <code>npm start</code> to start the local development server. (default <code>localhost:4200</code>)</p>
+<h2 id="cicd-and-azure-deployment">CI/CD and Azure Deployment</h2>
+<p>The automated building and deployment of the web app to Azure happens with the help of Github Actions. This action file can be found in <code>.github/workflows</code>.</p>
+<p>When a pull request is merged with the main branch, the web app is build and then deployed to an Azure web app.</p>
+<h2 id="api-connection">API Connection</h2>
+<p>The connection string used to communicate with the API is saved in the <code>src/Globals.ts</code> file as <code>apiUrl</code>. If the API is ever changed to a new domain, this string will have to be changed.</p>
+<h1 id="project-structure">Project Structure</h1>
+<h2 id="modularity">Modularity</h2>
+<p>This project has been developed with the principles of Angular modularity in mind. Modularity is a principle wherein code with related functionality is grouped together. There are several modules containing different aspects of the application.<br>More info on these modules and their child modules can be found in the README in each of the corresponding directories inside the <code>src</code> folder.</p>
+<h3 id="sharedmodule"><strong>SharedModule</strong></h3>
+<p>The SharedModule contains all code that is shared between all the users. This includes API services and modules such as the navbar, styles, etc.</p>
+<p>Link: <a href="src/app/shared/README.md"><strong>SharedModule</strong></a></p>
+<h3 id="securitymodule"><strong>SecurityModule</strong></h3>
+<p>The SecurityModule contains all code related to user login, registration, authentication and route guards.</p>
+<p>Link: <a href="src/app/security/README.md"><strong>SecurityModule</strong></a></p>
+<h3 id="authenticatedmodule"><strong>AuthenticatedModule</strong></h3>
+<p>The AuthenticatedModule contains all code related to users that are authenticated and logged in, such as the analyze and overview page.</p>
+<p>Link: <a href="src/app/authenticated/README.md"><strong>AuthenticatedModule</strong></a></p>
+<h2 id="styles">Styles</h2>
+<p>This project makes use of the bootstrap framework for styling and layout. The default bootstrap classes are expanded upon with custom colors and icons that are provided in the <code>src/_variables.scss</code> file.<br>Furthermore, every component has it&#39;s own <code>.scss</code> style sheet from which it can source it&#39;s own unique styling.</p>
+<h3 id="colours">Colours</h3>
+<p>The two newly added colours are the style colours provided by Vito, which are defined by <code>$vito-green</code> and <code>$vito-dark</code>. These are defined by the colour codes <code>0x81bb26</code> and <code>0x323031</code> respectively.</p>
+<h3 id="fonts">Fonts</h3>
+<p>The web application makes use of the custom font <code>Proxima Nova</code> for all text, as well as the custom icon font from Vito.</p>
+<h3 id="icons">Icons</h3>
+<p>The custom icons from Vito have been made available as css classes in 5 different sizes and three variations (normal, black and inverted). These icons can be used by adding <code>vicon-[black/inverted]-[sm/md/lg/xl/xxl]</code> to a HTML element. (<code>vicon-black-xl</code> for example). When using the icon inline in text it is recommended to use a <code>&lt;span&gt;</code> tag.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
