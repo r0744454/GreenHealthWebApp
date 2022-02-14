@@ -30,6 +30,7 @@ export const localeFr: Locale = {
         {key: "navbar_logout", meaning: "Déconnexion"},
         {key: "navbar_dashboard", meaning: "Tableau de bord"},
         {key: "navbar_register", meaning: "Enregistrer"},
+        {key: "navbar_android_app", meaning: "Application Androïd"},
 
         //footer
         {key: "footer_made_by", meaning: "Faite par "},
