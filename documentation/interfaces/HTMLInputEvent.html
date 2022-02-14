@@ -1,0 +1,335 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>greenhealth-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">greenhealth-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li
+  >
+  HTMLInputEvent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/authenticated/user/upload/upload.component.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+            </p>
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#target" 
+>
+                                            target
+                                        </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="target"></a>
+                                        <span class="name "><b>target</b>
+                                            <a href="#target">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>target:     <code></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { Plant } from &#x27;src/app/shared/models/Plant&#x27;;
+import { Plot } from &#x27;src/app/shared/models/Plot&#x27;;
+import { AnalysisService } from &#x27;src/app/shared/services/analysis/analysis.service&#x27;;
+import { PlantService } from &#x27;src/app/shared/services/plant/plant.service&#x27;;
+import { PlotService } from &#x27;src/app/shared/services/plot/plot.service&#x27;;
+import { TranslationService } from &#x27;src/app/shared/services/translation/translation.service&#x27;;
+
+interface HTMLInputEvent extends Event {
+  target: HTMLInputElement &amp; EventTarget;
+}
+
+@Component({
+  selector: &#x27;app-upload&#x27;,
+  templateUrl: &#x27;./upload.component.html&#x27;,
+  styleUrls: [&#x27;./upload.component.scss&#x27;]
+})
+
+export class UploadComponent implements OnInit {
+
+  plantImage: File &#x3D; new File([], &quot;tfile.jpg&quot;);
+  isSubmitted: boolean &#x3D; false;
+  submitError: boolean &#x3D; false;
+
+  defaultPlot: Plot &#x3D; {id: 0, organisationId: 0, location: &quot;&quot;};
+  plots: Plot[] &#x3D; new Array&lt;Plot&gt;();
+  $plots: Subscription &#x3D; new Subscription();
+
+  plant: Plant &#x3D; {id: 0, plotId: 0, timestamp: &quot;&quot;}
+
+  imgSource: string &#x3D; &quot;&quot;;
+
+  constructor(private plantService: PlantService, private router: Router, private analysisService: AnalysisService, private plotService: PlotService, public t: TranslationService) { }
+
+  ngOnInit(): void {
+    this.defaultPlot &#x3D; this.plotService.getDefaultPlot();
+    this.$plots &#x3D; this.plotService.getPlots().subscribe(r &#x3D;&gt; {
+      this.plots &#x3D; r;
+    })
+  }
+
+  onAnalysis(): void {
+    this.isSubmitted &#x3D; true;
+    if(this.plantImage.size &#x3D;&#x3D; 0) {
+      this.isSubmitted &#x3D; false;
+      this.submitError &#x3D; true;
+      return;
+    }
+
+    var data &#x3D; new FormData();
+    data.append(&#x27;image&#x27;, this.plantImage);
+    this.plant.plotId &#x3D; this.defaultPlot.id;
+
+    this.plantService.postPlant(this.plant).subscribe(r1 &#x3D;&gt; {
+      this.plant &#x3D; r1;
+      this.plantService.patchImage(this.plant, data).subscribe(r2 &#x3D;&gt; {
+        this.analysisService.imageString &#x3D; this.imgSource;
+        this.analysisService.plant &#x3D; this.plant;
+        this.router.navigateByUrl(&quot;/user/analysis&quot;);
+      },
+      err &#x3D;&gt; {
+        console.log(err);
+      });
+    },
+    err &#x3D;&gt; {
+      console.log(err);
+    });
+  }
+
+  onUpload() {
+    this.isSubmitted &#x3D; true;
+    if(this.plantImage.size &#x3D;&#x3D; 0) {
+      this.isSubmitted &#x3D; false;
+      this.submitError &#x3D; true;
+      return;
+    }
+
+    var data &#x3D; new FormData();
+    data.append(&#x27;image&#x27;, this.plantImage);
+    this.plant.plotId &#x3D; this.defaultPlot.id;
+
+    this.plantService.postPlant(this.plant).subscribe(r1 &#x3D;&gt; {
+      this.plant &#x3D; r1;
+      this.plantService.patchImage(this.plant, data).subscribe(r2 &#x3D;&gt; {
+        window.location.reload();
+      },
+      err &#x3D;&gt; {
+        console.log(err);
+      });
+    },
+    err &#x3D;&gt; {
+      console.log(err);
+    });
+  }
+
+  getBase64(file: File): Promise&lt;string |ArrayBuffer | null&gt; {
+    return new Promise((resolve, reject) &#x3D;&gt; {
+      const reader &#x3D; new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload &#x3D; () &#x3D;&gt; resolve(reader.result);
+      reader.onerror &#x3D; error &#x3D;&gt; reject(error);
+    });
+  }
+
+  onRefreshFile(e: Event): void {
+    var target &#x3D; (e as HTMLInputEvent).target
+    if(target.files !&#x3D; null) {
+      this.plantImage &#x3D; target.files[0];
+
+      this.getBase64(this.plantImage).then(r &#x3D;&gt; {
+        if(r !&#x3D; null) {
+          this.imgSource &#x3D; r.toString();
+        }
+      });
+
+      this.submitError &#x3D; false;
+    }
+  }
+
+  compareFn(x: Plot, y: Plot): boolean {
+    return x.id &#x3D;&#x3D; y.id;
+  }
+
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'HTMLInputEvent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

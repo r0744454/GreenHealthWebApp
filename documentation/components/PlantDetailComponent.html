@@ -1,0 +1,1392 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>greenhealth-frontend documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">greenhealth-frontend documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  PlantDetailComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/authenticated/user/plant-detail/plant-detail.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-plant-detail</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./plant-detail.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./plant-detail.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#accDisp" >accDisp</a>
+                            </li>
+                            <li>
+                                <a href="#imgUrl" >imgUrl</a>
+                            </li>
+                            <li>
+                                <a href="#plant" >plant</a>
+                            </li>
+                            <li>
+                                <a href="#plantId" >plantId</a>
+                            </li>
+                            <li>
+                                <a href="#plotId" >plotId</a>
+                            </li>
+                            <li>
+                                <a href="#result" >result</a>
+                            </li>
+                            <li>
+                                <a href="#savingResult" >savingResult</a>
+                            </li>
+                            <li>
+                                <a href="#speciesList" >speciesList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#t" >t</a>
+                            </li>
+                            <li>
+                                <a href="#trueValue" >trueValue</a>
+                            </li>
+                            <li>
+                                <a href="#weekNumbers" >weekNumbers</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#analysePlant" >analysePlant</a>
+                            </li>
+                            <li>
+                                <a href="#navigateBack" >navigateBack</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onGrowthStageChange" >onGrowthStageChange</a>
+                            </li>
+                            <li>
+                                <a href="#onSpeciesChange" >onSpeciesChange</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#sanitizeGrowthStage" >sanitizeGrowthStage</a>
+                            </li>
+                            <li>
+                                <a href="#setAcc" >setAcc</a>
+                            </li>
+                            <li>
+                                <a href="#setImgUrl" >setImgUrl</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(t: <a href="../injectables/TranslationService.html" target="_self">TranslationService</a>, ps: <a href="../injectables/PlantService.html" target="_self">PlantService</a>, rs: <a href="../injectables/ResultService.html" target="_self">ResultService</a>, ar: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, r: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>t</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TranslationService.html" target="_self" >TranslationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>ps</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PlantService.html" target="_self" >PlantService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>rs</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ResultService.html" target="_self" >ResultService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>ar</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>r</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="analysePlant"></a>
+                    <span class="name">
+                        <span ><b>analysePlant</b></span>
+                        <a href="#analysePlant"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>analysePlant()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="navigateBack"></a>
+                    <span class="name">
+                        <span ><b>navigateBack</b></span>
+                        <a href="#navigateBack"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>navigateBack()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:33</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onGrowthStageChange"></a>
+                    <span class="name">
+                        <span ><b>onGrowthStageChange</b></span>
+                        <a href="#onGrowthStageChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onGrowthStageChange(t: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>t</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSpeciesChange"></a>
+                    <span class="name">
+                        <span ><b>onSpeciesChange</b></span>
+                        <a href="#onSpeciesChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSpeciesChange(t: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>t</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sanitizeGrowthStage"></a>
+                    <span class="name">
+                        <span ><b>sanitizeGrowthStage</b></span>
+                        <a href="#sanitizeGrowthStage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sanitizeGrowthStage(a: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>a</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setAcc"></a>
+                    <span class="name">
+                        <span ><b>setAcc</b></span>
+                        <a href="#setAcc"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setAcc(a: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>a</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setImgUrl"></a>
+                    <span class="name">
+                        <span ><b>setImgUrl</b></span>
+                        <a href="#setImgUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setImgUrl()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="accDisp"></a>
+                    <span class="name">
+                        <span ><b>accDisp</b></span>
+                        <a href="#accDisp"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="imgUrl"></a>
+                    <span class="name">
+                        <span ><b>imgUrl</b></span>
+                        <a href="#imgUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="plant"></a>
+                    <span class="name">
+                        <span ><b>plant</b></span>
+                        <a href="#plant"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Plant.html" target="_self" >Plant</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{id: 0, plotId: 0, timestamp: &quot;&quot;}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="plantId"></a>
+                    <span class="name">
+                        <span ><b>plantId</b></span>
+                        <a href="#plantId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="plotId"></a>
+                    <span class="name">
+                        <span ><b>plotId</b></span>
+                        <a href="#plotId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="result"></a>
+                    <span class="name">
+                        <span ><b>result</b></span>
+                        <a href="#result"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Result.html" target="_self" >Result</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{id: 0, growthStage: 0}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="savingResult"></a>
+                    <span class="name">
+                        <span ><b>savingResult</b></span>
+                        <a href="#savingResult"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="speciesList"></a>
+                    <span class="name">
+                        <span ><b>speciesList</b></span>
+                        <a href="#speciesList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&quot;mais&quot;, &quot;fles&quot;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="t"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>t</b></span>
+                        <a href="#t"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/TranslationService.html" target="_self" >TranslationService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="trueValue"></a>
+                    <span class="name">
+                        <span ><b>trueValue</b></span>
+                        <a href="#trueValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="weekNumbers"></a>
+                    <span class="name">
+                        <span ><b>weekNumbers</b></span>
+                        <a href="#weekNumbers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>number[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[1,2,3,4,5,6]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/authenticated/user/plant-detail/plant-detail.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { ConnectionStrings } from &#x27;src/app/Globals&#x27;;
+import { Plant } from &#x27;src/app/shared/models/Plant&#x27;;
+import { Result } from &#x27;src/app/shared/models/Result&#x27;;
+import { PlantService } from &#x27;src/app/shared/services/plant/plant.service&#x27;;
+import { ResultService } from &#x27;src/app/shared/services/result/result.service&#x27;;
+import { TranslationService } from &#x27;src/app/shared/services/translation/translation.service&#x27;;
+
+@Component({
+  selector: &#x27;app-plant-detail&#x27;,
+  templateUrl: &#x27;./plant-detail.component.html&#x27;,
+  styleUrls: [&#x27;./plant-detail.component.scss&#x27;]
+})
+export class PlantDetailComponent implements OnInit {
+
+  plotId: number &#x3D; 0;
+  plantId: number &#x3D; 0;
+  speciesList: string[] &#x3D; [&quot;mais&quot;, &quot;fles&quot;]
+  weekNumbers: number[] &#x3D; [1,2,3,4,5,6]
+
+  plant: Plant &#x3D; {id: 0, plotId: 0, timestamp: &quot;&quot;}
+  result: Result &#x3D; {id: 0, growthStage: 0}
+
+  imgUrl: string &#x3D; &quot;&quot;;
+  accDisp: string &#x3D; &quot;&quot;;
+
+  trueValue &#x3D; true;
+  savingResult &#x3D; false;
+
+  constructor(public t: TranslationService, private ps: PlantService, private rs: ResultService, private ar: ActivatedRoute, private r: Router) { }
+
+  ngOnInit(): void {
+    this.plotId &#x3D; parseInt(this.ar.snapshot.paramMap.get(&quot;pid&quot;) ?? &quot;0&quot;);
+    this.plantId &#x3D; parseInt(this.ar.snapshot.paramMap.get(&quot;id&quot;) ?? &quot;0&quot;);
+
+    this.ps.getPlant(this.plantId).subscribe(
+      r &#x3D;&gt; {
+        this.plant &#x3D; r;
+        if(this.plant.result !&#x3D; null) {
+          this.result &#x3D; this.plant.result;
+          this.setAcc(this.plant.result.accuracy ?? 0);
+        }
+
+        this.setImgUrl();
+      }
+    );
+  }
+
+  setImgUrl(): void {
+    if(this.plant.imagePath &#x3D;&#x3D; null) {
+      this.imgUrl &#x3D;  &quot;../../../assets/img/picture.jpeg&quot;;
+    }
+    this.imgUrl &#x3D; ConnectionStrings.blobUrl + this.plant.imagePath;
+  }
+
+  analysePlant(): void {
+    this.ps.getPlantResult(this.plantId).subscribe(
+      r &#x3D;&gt; {
+        this.plant.resultId &#x3D; r.id;
+        this.plant.result &#x3D; r;
+
+        this.result &#x3D; r;
+        this.setAcc(r.accuracy ?? 0);
+      }
+    );
+  }
+
+  navigateBack(): void {
+    this.r.navigateByUrl(&quot;user/plots/&quot;+this.plotId);
+  }
+
+  onSubmit(): void {
+    this.rs.putResult(this.result).subscribe();
+    this.plant.result &#x3D; this.result;
+  }
+
+  sanitizeGrowthStage(a: string): number {
+    return parseInt(a.split(&#x27; &#x27;)[1]);
+  }
+
+  onGrowthStageChange(t: any): void {
+    this.result.correctedGrowthStage &#x3D; this.sanitizeGrowthStage(t.value);
+  }
+
+  onSpeciesChange(t: any): void {
+    this.result.correctedSpecies &#x3D; t.value;
+  }
+
+  setAcc(a: number): void {
+    this.accDisp &#x3D; (Math.round(a*100)/100).toString() + &quot;%&quot;;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;div class&#x3D;&quot;row mb-2&quot;&gt;
+        &lt;div class&#x3D;&quot;col&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-vito-green&quot; (click)&#x3D;&quot;navigateBack()&quot;&gt;&lt;span class&#x3D;&quot;vicon-black-sm vicon-arrow-left&quot;&gt;&lt;/span&gt;{{t.gt(&quot;return_previous&quot;)}}&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col col-12 col-md-4 d-flex justify-content-center&quot;&gt;
+            &lt;img [src]&#x3D;&quot;imgUrl&quot; width&#x3D;&quot;250&quot; height&#x3D;&quot;250&quot; class&#x3D;&quot;mw-100&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col col-12 col-md-8 text-center&quot; *ngIf&#x3D;&quot;!plant.result&quot;&gt;
+            &lt;p&gt;{{t.gt(&quot;image_status_hover_nana&quot;)}}&lt;/p&gt;
+            &lt;button class&#x3D;&quot;btn btn-vito-green&quot; (click)&#x3D;&quot;analysePlant()&quot;&gt;{{t.gt(&quot;pd_analyse_confirm&quot;)}}&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col col-12 col-md-8 text-center&quot; *ngIf&#x3D;&quot;plant.result&quot;&gt;
+            &lt;div class&#x3D;&quot;row&quot;&gt;
+                &lt;div class&#x3D;&quot;col col-12 col-lg-6&quot;&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col col-6 text-end&quot;&gt;{{t.gt(&quot;pd_growthstage_naming&quot;)}}&lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col col-6 text-start&quot;&gt;{{result.correctedGrowthStage ?? result.growthStage}}&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col col-6 text-end&quot;&gt;{{t.gt(&quot;pd_species_naming&quot;)}}&lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col col-6 text-start&quot;&gt;{{t.gt(&quot;species_&quot;+(result.correctedSpecies ?? result.species))}}&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col col-6 text-end&quot;&gt;{{t.gt(&quot;pd_accuracy_naming&quot;)}}&lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col col-6 text-start&quot;&gt;{{accDisp}}&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col col-12 col-lg-6&quot;&gt;
+                    &lt;form (ngSubmit)&#x3D;&quot;onSubmit()&quot; #correctionForm&#x3D;&quot;ngForm&quot;&gt;
+                        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                            &lt;label for&#x3D;&quot;resultInput&quot;&gt;{{t.gt(&quot;p_growthstage_correction&quot;)}}&lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-select&quot; id&#x3D;&quot;resultInput&quot; (change)&#x3D;&quot;onGrowthStageChange($event.target)&quot;&gt;
+                                &lt;option *ngFor&#x3D;&quot;let week of weekNumbers&quot; [ngValue]&#x3D;&quot;week&quot; [selected]&#x3D;&quot;result.growthStage &#x3D;&#x3D; week&quot;&gt;{{t.gt(&quot;growthstage_naming&quot;, [week.toString()])}}&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                            &lt;label for&#x3D;&quot;speciesInput&quot;&gt;{{t.gt(&quot;p_species_correction&quot;)}}&lt;/label&gt;
+                            &lt;select class&#x3D;&quot;form-select mw-50&quot; id&#x3D;&quot;speciesInput&quot; (change)&#x3D;&quot;onSpeciesChange($event.target)&quot;&gt;
+                                &lt;option *ngFor&#x3D;&quot;let species of speciesList&quot; [ngValue]&#x3D;&quot;species&quot; [selected]&#x3D;&quot;result.species &#x3D;&#x3D; species&quot;&gt;{{t.gt(&quot;species_&quot;+species)}}&lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;d-flex justify-content-center&quot; id&#x3D;&quot;correctionButton&quot;&gt;
+                            &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-vito-green mt-3&quot;&gt;{{t.gt(&quot;correction_save&quot;)}}&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./plant-detail.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">img {
+    object-fit: cover;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">    <div class="row mb-2">        <div class="col">            <button class="btn btn-vito-green" (click)="navigateBack()"><span class="vicon-black-sm vicon-arrow-left"></span>{{t.gt("return_previous")}}</button>        </div>    </div>    <div class="row">        <div class="col col-12 col-md-4 d-flex justify-content-center">            <img [src]="imgUrl" width="250" height="250" class="mw-100">        </div>        <div class="col col-12 col-md-8 text-center" *ngIf="!plant.result">            <p>{{t.gt("image_status_hover_nana")}}</p>            <button class="btn btn-vito-green" (click)="analysePlant()">{{t.gt("pd_analyse_confirm")}}</button>        </div>        <div class="col col-12 col-md-8 text-center" *ngIf="plant.result">            <div class="row">                <div class="col col-12 col-lg-6">                    <div class="row">                        <div class="col col-6 text-end">{{t.gt("pd_growthstage_naming")}}</div>                        <div class="col col-6 text-start">{{result.correctedGrowthStage ?? result.growthStage}}</div>                    </div>                    <div class="row">                        <div class="col col-6 text-end">{{t.gt("pd_species_naming")}}</div>                        <div class="col col-6 text-start">{{t.gt("species_"+(result.correctedSpecies ?? result.species))}}</div>                    </div>                    <div class="row">                        <div class="col col-6 text-end">{{t.gt("pd_accuracy_naming")}}</div>                        <div class="col col-6 text-start">{{accDisp}}</div>                    </div>                </div>                <div class="col col-12 col-lg-6">                    <form (ngSubmit)="onSubmit()" #correctionForm="ngForm">                        <div class="form-group">                            <label for="resultInput">{{t.gt("p_growthstage_correction")}}</label>                            <select class="form-select" id="resultInput" (change)="onGrowthStageChange($event.target)">                                <option *ngFor="let week of weekNumbers" [ngValue]="week" [selected]="result.growthStage == week">{{t.gt("growthstage_naming", [week.toString()])}}</option>                            </select>                        </div>                        <div class="form-group">                            <label for="speciesInput">{{t.gt("p_species_correction")}}</label>                            <select class="form-select mw-50" id="speciesInput" (change)="onSpeciesChange($event.target)">                                <option *ngFor="let species of speciesList" [ngValue]="species" [selected]="result.species == species">{{t.gt("species_"+species)}}</option>                            </select>                        </div>                        <div class="d-flex justify-content-center" id="correctionButton">                            <button type="submit" class="btn btn-vito-green mt-3">{{t.gt("correction_save")}}</button>                        </div>                    </form>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AnalysisComponent', 'selector': 'app-analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'PlantCardComponent', 'selector': 'app-plant-card'},{'name': 'PlantDetailComponent', 'selector': 'app-plant-detail'},{'name': 'PlotCardComponent', 'selector': 'app-plot-card'},{'name': 'PlotDetailComponent', 'selector': 'app-plot-detail'},{'name': 'PlotOverviewComponent', 'selector': 'app-plot-overview'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'UploadComponent', 'selector': 'app-upload'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'PlantDetailComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PlantDetailComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

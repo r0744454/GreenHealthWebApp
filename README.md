@@ -2,6 +2,8 @@
 
 This is the web app for the Green Health AI Platform. The app allow users to upload an image of a plant and to analyze the properties of that plant.
 
+A comprehensive overview of the entire project can be generated with compodoc using ``npm compodoc``, after which the documentation can be accessed through [**documentation/index.html**](./documentation/index.html)
+
 ## Development Setup Guide
 
 To get started with the project the following tools have to be installed:
