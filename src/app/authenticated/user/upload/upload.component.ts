@@ -84,7 +84,7 @@ export class UploadComponent implements OnInit {
     this.plantService.postPlant(this.plant).subscribe(r1 => {
       this.plant = r1;
       this.plantService.patchImage(this.plant, data).subscribe(r2 => {
-        window.location.reload();
+        this.router.navigateByUrl("user/plots/"+r2.plotId+'/'+r2.id);
       },
       err => {
         console.log(err);
